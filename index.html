@@ -92,7 +92,6 @@
         grid-template-columns: 280px 1fr;
         min-height: 100vh;
       }
-      /* SIDEBAR */
       .sidebar {
         background: var(--primary-deep);
         color: #edf2e8;
@@ -152,8 +151,6 @@
       .sidebar-foot a {
         color: #cbdaca;
       }
-
-      /* MAIN */
       main {
         padding: 3rem 4vw 5rem;
         max-width: 1080px;
@@ -197,7 +194,6 @@
         border-radius: 50%;
         background: currentColor;
       }
-
       section.view {
         display: none;
       }
@@ -215,7 +211,6 @@
           transform: translateY(0);
         }
       }
-
       h1.page-title {
         font-size: 2.1rem;
         margin: 0 0 0.6rem;
@@ -226,7 +221,6 @@
         max-width: 60ch;
         margin-bottom: 2.5rem;
       }
-
       .card {
         background: var(--surface);
         border: 1px solid var(--rule);
@@ -268,7 +262,6 @@
       .card li strong {
         color: var(--primary-deep);
       }
-
       .resource-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -297,43 +290,15 @@
         font-weight: 600;
         color: var(--primary-deep);
       }
-
-      .family-card {
-        background: var(--primary-tint);
-        border: 1px solid var(--rule);
-        border-radius: var(--radius);
-        padding: 1.6rem 1.8rem;
-        margin-bottom: 1.6rem;
-      }
-      .family-card h2 {
-        font-size: 1.15rem;
-        margin: 0 0 0.9rem;
-      }
-      .family-type {
-        margin-bottom: 1.1rem;
-      }
-      .family-type:last-child {
-        margin-bottom: 0;
-      }
-      .family-type .ftname {
-        font-weight: 700;
-        color: var(--primary-deep);
-        display: block;
-        margin-bottom: 0.25rem;
-      }
-      .card a,
-      .family-card a {
+      .card a {
         color: var(--primary-deep);
         text-decoration: underline;
         text-decoration-style: dotted;
         text-underline-offset: 2px;
       }
-      .card a:hover,
-      .family-card a:hover {
+      .card a:hover {
         color: var(--accent);
       }
-
-      /* NAV GROUP LABEL */
       .nav-group-label {
         font-family: "IBM Plex Mono", monospace;
         font-size: 0.68rem;
@@ -345,8 +310,6 @@
       .nav-group-label:first-of-type {
         margin-top: 0.4rem;
       }
-
-      /* TOP-LEVEL NAV ITEM with colored dot */
       .path-btn.top {
         padding-left: 0.75rem;
       }
@@ -377,8 +340,6 @@
       .path-btn[data-tag="crisis"] .dot {
         background: var(--crisis);
       }
-
-      /* NESTED SUB-NAVIGATION */
       .subnav {
         max-height: 0;
         overflow: hidden;
@@ -411,8 +372,6 @@
         border-left: 2px solid var(--accent);
         font-weight: 600;
       }
-
-      /* HAMBURGER + DRAWER (mobile) */
       .hamburger {
         display: none;
         position: fixed;
@@ -444,8 +403,6 @@
         background: rgba(0, 0, 0, 0.45);
         z-index: 45;
       }
-
-      /* QUICK-JUMP SUBTABS within content */
       .subtabs {
         display: flex;
         gap: 0.4rem;
@@ -482,20 +439,6 @@
         border-color: var(--primary);
         color: var(--primary-deep);
       }
-
-      .placeholder {
-        border: 1.5px dashed var(--rule);
-        border-radius: var(--radius);
-        padding: 3rem 2rem;
-        text-align: center;
-        color: var(--ink-soft);
-      }
-      .placeholder h2 {
-        color: var(--ink-soft);
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-      }
-
       .ref-list {
         padding-left: 0;
         list-style: none;
@@ -507,16 +450,13 @@
         font-size: 0.92rem;
         color: var(--ink-soft);
       }
-
       @media (max-width: 820px) {
         .app {
           grid-template-columns: 1fr;
         }
-
         .hamburger {
           display: flex;
         }
-
         .sidebar {
           position: fixed;
           top: 0;
@@ -538,7 +478,6 @@
         .drawer-backdrop.open {
           display: block;
         }
-
         main {
           padding: 1.6rem 5vw 3rem;
         }
@@ -549,8 +488,7 @@
           font-size: 0.95rem;
           margin-bottom: 1rem;
         }
-        .card,
-        .family-card {
+        .card {
           padding: 1.2rem 1.15rem;
         }
         .resource-grid {
@@ -585,9 +523,6 @@
             <span class="dot"></span>Economic Contexts
           </button>
           <div class="subnav" data-subnav-for="econ">
-            <a href="#econ-family" data-target="econ" data-anchor="econ-family"
-              >Family Types</a
-            >
             <a
               href="#econ-understanding"
               data-target="econ"
@@ -624,12 +559,6 @@
             <span class="dot"></span>Social Contexts
           </button>
           <div class="subnav" data-subnav-for="social">
-            <a
-              href="#social-family"
-              data-target="social"
-              data-anchor="social-family"
-              >Family Types</a
-            >
             <a
               href="#social-understanding"
               data-target="social"
@@ -672,9 +601,6 @@
             <span class="dot"></span>Cultural &amp; Diversity
           </button>
           <div class="subnav" data-subnav-for="cult">
-            <a href="#cult-family" data-target="cult" data-anchor="cult-family"
-              >Family Types</a
-            >
             <a
               href="#cult-understanding"
               data-target="cult"
@@ -711,12 +637,6 @@
             <span class="dot"></span>Health &amp; Wellbeing
           </button>
           <div class="subnav" data-subnav-for="health">
-            <a
-              href="#health-family"
-              data-target="health"
-              data-anchor="health-family"
-              >Family Types</a
-            >
             <a
               href="#health-understanding"
               data-target="health"
@@ -759,12 +679,6 @@
             <span class="dot"></span>Crisis &amp; Emergency
           </button>
           <div class="subnav" data-subnav-for="crisis">
-            <a
-              href="#crisis-family"
-              data-target="crisis"
-              data-anchor="crisis-family"
-              >Family Types</a
-            >
             <a
               href="#crisis-understanding"
               data-target="crisis"
@@ -815,9 +729,8 @@
         </div>
 
         <div class="sidebar-foot">
-          Draft complete — all five contexts (Economic, Social, Cultural &amp;
-          Diversity, Health &amp; Wellbeing, and Crisis &amp; Emergency) are
-          finished, with a full APA 7 reference list.
+          Shova Gautam — EPRO506 Assessment 3: Digital Portfolio. Working with
+          Children, Families, and Communities in Contemporary Society.
         </div>
       </nav>
 
@@ -851,24 +764,20 @@
           </div>
         </section>
 
-        <!-- ECONOMIC -->
+        <!-- ==================== ECONOMIC ==================== -->
         <section class="view" id="econ">
           <span class="tag-chip econ"
             ><span class="tag-dot"></span>Economic Contexts</span
           >
           <h1 class="page-title">
-            Financial Hardship, Poverty &amp; Housing Stress
+            Families Experiencing Poverty and Housing Stress
           </h1>
           <p class="lede">
-            Investigating the effect inadequate income and unstable housing has
-            on the early years of childhood and how early learning services
-            should be responding to this.
+            Examining how inadequate income and housing instability affect young
+            children and how early childhood services can respond.
           </p>
 
           <div class="subtabs">
-            <a href="#econ-family" class="subtab" data-anchor="econ-family"
-              >Family Types</a
-            >
             <a
               href="#econ-understanding"
               class="subtab"
@@ -901,61 +810,46 @@
             >
           </div>
 
-          <div class="family-card" id="econ-family">
-            <h2>Family Types in This Context</h2>
-            <div class="family-type">
-              <span class="ftname">Single-parent families</span>Single-parent
-              families have the largest proportion of those living below the
-              poverty line, with more than a third of all single-parent families
-              living below this line. These families are more likely to have
-              their children move often, and less likely to provide them with
-              monetary rewards such as outings and extracurricular activities.
-            </div>
-            <div class="family-type">
-              <span class="ftname">Multi-generational households</span
-              >Multi-generational households (typically grandparents, parents
-              and children living together – sometimes because rents are too
-              high to live independently) are another way of relieving housing
-              strain, in addition to affordable rents. This can help provide
-              additional hands for caring, though for some children, the added
-              closeness of living together too many times can be temporary
-              disruptions to the routine and stability that they need.
-            </div>
-          </div>
-
           <div class="card" id="econ-understanding">
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
-              Economic context includes family income, housing and
-              affordability. The squeeze on Australia's cost of living has
-              increased since 2021, when rents increased and wages fell. The
-              incidence of poverty for sole parents is over one third (28.4%),
-              and by 2025, it is estimated that 15.6% of Australian children
-              will be living in poverty (Duncan, 2025). This is a critical
-              aspect in the early years. The family investment model proposes
-              that poorer children receive less stimulating input and the family
-              stress model proposes that stressful financial situations lead to
-              reactive parenting and unpredictability (Masarik &amp; Conger,
-              2017). They both belong to Bronfenbrenner's bioecological model in
-              which exo-level disadvantages (job security, housing, policy) feed
-              into the day-to-day life of the family (Zhang &amp; Han, 2020).
-              This is impacting not only income-support families, but also what
-              were once “comfortable” dual-income households that are now facing
-              increased expenses.
+              This section examines poor and stressed families. In Australia,
+              economic disadvantage is about the capacity of a family to meet
+              basic needs, be part of society, and have access to services.
+              Housing stress, defined as spending more than 30% of household
+              income on rent, leads to instability and to regular move-in and
+              move-outs.
+            </p>
+            <p>
+              It is important for economic contexts to be understood in ECE
+              because financial difficulties have direct effects on the home
+              environment. The microsystem (direct family) is strongly connected
+              to the exosystem (parental work and government housing policies)
+              in Bronfenbrenner's Ecological Systems Theory (Bronfenbrenner,
+              2021). Parents' ability to provide stable routines is reduced by
+              financial stress. Recent studies reveal that the increase in
+              inflation and a serious shortage of rental housing has expanded
+              the family group of those at hardship, and ECE services now serve
+              middle-income families who have been thrust into the hardship
+              category (Healy et al., 2025).
             </p>
           </div>
 
           <div class="card" id="econ-impact">
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
-              Environmental factors are most important in shaping brain
-              architecture during the first five years of life (from prenatal to
-              school-age periods). Poor nutrition, substandard housing and
-              health services may stunt as much physical development as mental
-              growth (O’Donnell &amp; Kingsley, 2020), and the Centre for
-              Community Child Health notes that parents in poverty are two to
-              three times more likely to end up suffering from mental ill-health
-              (Centre for Community Child Health, 2020).
+              Economic hardship has a strong impact on the development and
+              wellbeing of children. Parental mental health issues may be caused
+              by financial stress, which may impact parent-child interactions
+              (Nasr et al., 2025). Children may suffer from food insecurity
+              which can affect their ability to focus and development (Healy et
+              al., 2025). Educators may observe that children are coming to ECE
+              services without enough clothes on, without enough nutritious
+              food, or tired. High mobility by virtue of housing stress,
+              children move in and out of ECE services, this impacts on learning
+              continuity, sense of belonging, and peer relationships (Thorpe et
+              al., 2020). Thus, teachers need to make sure that they provide a
+              consistent, predictable setting to balance home instability.
             </p>
           </div>
 
@@ -964,63 +858,52 @@
               <span class="num">03</span>Social Policy and Australian Responses
             </h2>
             <p>
-              There are several policy instruments that can help overcome these
-              obstacles. Providing a minimum of three subsidised days of early
-              learning for families per fortnight (in the current Child Care
-              Subsidy settings) helps reduce cost as a barrier to attendance for
-              families, and further reduces that cost for First Nations children
-              (Duncan, 2025). Other funding is also available through the
-              Inclusion Support Program to increase the capacity of services to
-              respond to the needs of children with additional support needs and
-              through a national Early Years Strategy and state-based First 2000
-              Days plans, which have a more systemic approach across health,
-              education and families support.
-            </p>
-            <p>
-              Over 180 organizations support this cause, with The End Child
-              Poverty campaign seeking a national Child Poverty Reduction Act
-              with legislated, time-bound targets. Inclusion funding and subsidy
-              arrangements are what a family in need has to access in practice,
-              and gaps in local services are the place where an educator has to
-              make links to local people.
+              The Child Care Subsidy (CCS) is an income-tested payment reducing
+              ECE costs for low and middle-income families. Additionally, the
+              Early Years Learning Framework (EYLF) requires educators to
+              practice Equity and Inclusion. These policies obligate services to
+              accommodate families facing hardship. For example, under the CCS,
+              services can waive the "Activity Test" for families experiencing
+              temporary financial hardship, ensuring children maintain access to
+              36 hours of subsidised care per fortnight.
             </p>
           </div>
 
           <div class="card" id="econ-strategies">
             <h2><span class="num">04</span>Strategies for Practice</h2>
-            <ol>
+            <ul>
               <li>
-                <strong>Fee flexibility and priority access.</strong> Adapt
-                Child Care Subsidy enrolment and gap fees based on discretion
-                that has been programmed into the priority of access for Child
-                Care Subsidy; a child should never be deprived because of
-                financial factors.
+                <strong>Establish a Clothing Bank:</strong> Educators discreetly
+                collect donated second-hand uniforms and weather-appropriate
+                clothing, offering items confidentially to ensure the child is
+                comfortable and included, building self-esteem.
               </li>
               <li>
-                <strong>Discreet, dignity-preserving practical support.</strong>
-                Establish normal systems of maintaining extra clothing, food, or
-                hygiene supplies away from where a child might be singled out to
-                search for them.
+                <strong>Key Educator Approach:</strong> Assigning a primary
+                educator to a child experiencing housing instability ensures
+                they have a consistent, secure base, tracking their emotional
+                wellbeing to build resilience.
               </li>
               <li>
-                <strong>Strengthening the home learning environment.</strong>
-                Provide simple, low-cost ideas for play and learning and
-                literacy, based on the philosophy of parents as first teachers,
-                as seen in the traditions of programs such as HIPPY.
+                <strong>Service-Supplied Meals:</strong> Where food insecurity
+                is noticed, educators can provide universal morning tea. This
+                removes the stigma of bringing a "poor" lunchbox and ensures all
+                children have the nutrition needed for cognitive engagement.
               </li>
               <li>
-                <strong>Warm referral pathways.</strong> Develop relationships
-                in real life with financial counselling, housing, and family
-                services with a proper referral, not a number stuck on a
-                noticeboard.
+                <strong>Flexible Drop-offs:</strong> Parents who are feeling
+                financial insecurity and whose transportation may be unreliable
+                may be acknowledged and flexible, non-judgmental morning
+                routines may be adopted to help minimize parent anxiety and
+                improve parent/teacher relationships.
               </li>
               <li>
-                <strong>Trauma-informed, relationship-based practice.</strong>
-                Understand that stress-induced behaviour is not a 'parenting
-                failure', and respond consistently and co-regulating (not
-                excluding parents).
+                <strong>Open-Ended Materials:</strong> Teachers show children
+                how to play with recycled materials. This is an example of the
+                high quality learning that does not need expensive toys and
+                encourages parents to do the same at home.
               </li>
-            </ol>
+            </ul>
           </div>
 
           <div class="card" id="econ-partnerships">
@@ -1031,40 +914,41 @@
               <li>
                 <strong
                   ><a
-                    href="https://www.thesmithfamily.com.au/programs/community"
+                    href="https://www.thesmithfamily.com.au"
                     target="_blank"
                     rel="noopener"
                     >The Smith Family</a
                   ></strong
                 >
-                — Delivers a children's education and the Learning for Life
-                program, and referral and family support services are co-located
-                with it.
+                — A national organization that offers educational assistance.
+                ECE services work together by referring families to the
+                Families' 'Learning for Life' programme, which funds education.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://bsl.org.au/research/our-research-topics-and-projects/early-years/"
+                    href="https://www.vinnies.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Brotherhood of St Laurence</a
+                    >St Vincent de Paul Society (Vinnies)</a
                   ></strong
                 >
-                — A social justice group that provides early-years services and
-                advocates on child poverty issues as a delivery partner.
+                — Responds to emergency needs and supplies. ECE services can
+                establish a partnership with local branches to expedite services
+                for families experiencing crisis.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.goodstart.org.au"
+                    href="https://www.servicesaustralia.gov.au/individuals/services/centrelink/local-government"
                     target="_blank"
                     rel="noopener"
-                    >Goodstart Early Learning</a
+                    >Local Council Services</a
                   ></strong
                 >
-                — Founded by BSL, Benevolent Society, Mission Australia and
-                Social Ventures Australia, Australia's largest not-for-profit
-                early learning provider and a national champion for fair access.
+                — Local governments offer financial counselling and rate/rent
+                relief. Educators provide families with direct contact details
+                or warm referrals.
               </li>
               <li>
                 <strong
@@ -1072,25 +956,25 @@
                     href="https://www.servicesaustralia.gov.au/child-care-subsidy"
                     target="_blank"
                     rel="noopener"
-                    >Services Australia</a
+                    >Centrelink / Services Australia</a
                   ></strong
                 >
-                — Ensures that the administration of the Child Care Subsidy and
-                Family Tax Benefit is carried out and links families with
-                financial counselling and concessions.
+                — Offers the Temporary Financial Hardship payment. ECE services
+                assist parents by providing necessary paperwork to support their
+                claim.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.dss.gov.au/early-childhood/supporting-childhood-development"
+                    href="https://www.financialcounsellingaustralia.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Local Communities for Children Facilitating Partners</a
+                    >Financial Counselling Australia (FCA)</a
                   ></strong
                 >
-                — Place-based partnerships which are established by government
-                investment to coordinate place-based family services in poor
-                place-based areas.
+                — Offers free, independent financial counselling. An ECE service
+                could host a counsellor for confidential, on-site appointments
+                for stressed parents.
               </li>
             </ul>
           </div>
@@ -1099,40 +983,8 @@
             <h2>
               <span class="num">06</span>Resources for Educators and Children
             </h2>
-            <p><strong>Projects, programs &amp; websites</strong></p>
+            <p><strong>Projects, Programs &amp; Websites</strong></p>
             <div class="resource-grid">
-              <div class="res">
-                <span class="k">Program</span>
-                <p class="title">
-                  <a
-                    href="https://hippyaustralia.bsl.org.au"
-                    target="_blank"
-                    rel="noopener"
-                    >HIPPY Australia</a
-                  >
-                </p>
-                <p>
-                  A parenting resource for home-based early learning programs
-                  under stressful circumstances that helps to nurture children's
-                  confidence and resilience in an ongoing and parent-led way.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Program</span>
-                <p class="title">
-                  <a
-                    href="https://www.thesmithfamily.com.au/programs/community"
-                    target="_blank"
-                    rel="noopener"
-                    >The Smith Family — Learning for Life</a
-                  >
-                </p>
-                <p>
-                  Sponsor/mentor children with long-term interventions that
-                  increase their confidence and their confidence in their own
-                  capacity to learn.
-                </p>
-              </div>
               <div class="res">
                 <span class="k">Website</span>
                 <p class="title">
@@ -1140,186 +992,207 @@
                     href="https://raisingchildren.net.au"
                     target="_blank"
                     rel="noopener"
-                    >Raising Children Network — financial stress</a
+                    >Raising Children Network</a
                   >
                 </p>
                 <p>
-                  Parental factsheets about effects of financial stress on young
-                  children.
+                  Provides articles on budgeting for the family; teachers post
+                  links in service newsletter.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Website</span>
+                <span class="k">Organisation</span>
                 <p class="title">
                   <a
-                    href="https://bcec.edu.au/publications/child-poverty-in-australia-2025/"
+                    href="https://www.acoss.org.au"
                     target="_blank"
                     rel="noopener"
-                    >End Child Poverty / BCEC reports</a
+                    >ACOSS</a
                   >
                 </p>
                 <p>
-                  Australian evidence to support, for all educators, a language
-                  of action to end child poverty.
+                  Supplies up-to-date facts on poverty; educators inform
+                  inclusion policies with this information.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Training</span>
+                <p class="title">
+                  <a
+                    href="https://www.emergingminds.com.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Emerging Minds</a
+                  >
+                </p>
+                <p>
+                  Offers free online training for educators on supporting
+                  children experiencing economic disadvantage.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Program</span>
+                <p class="title">
+                  <a
+                    href="https://www.foodbank.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Foodbank Australia</a
+                  >
+                </p>
+                <p>
+                  Services can partner with Foodbank to access free breakfast
+                  items for the service.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's storybooks (birth–5)</strong>
+              <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/book/show/1407783"
+                    href="https://www.goodreads.com/book/show/1045708.Those_Shoes"
                     target="_blank"
                     rel="noopener"
-                    >A Chair for My Mother</a
+                    >Those Shoes — Maribeth Boelts</a
                   >
                 </p>
                 <p>
-                  Vera B. Williams: a story of saving after loss and nurturing a
-                  sense of family resilience.
+                  Teaches needs vs. wants. Teachers employ it to teach children
+                  that material things are not a person's value.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/search?q=Yard+Sale+Eve+Bunting"
+                    href="https://www.goodreads.com/book/show/22915084-last-stop-on-market-street"
                     target="_blank"
                     rel="noopener"
-                    >Yard Sale</a
+                    >Last Stop on Market Street — Matt de la Peña</a
                   >
                 </p>
                 <p>
-                  Eve Bunting &amp; Lauren Castillo: nurtures children on their
-                  journey through transition and redefines the meaning of home.
+                  Celebrates finding beauty in everyday life despite
+                  disadvantage, supporting resilience.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/search?q=Maddi%27s+Fridge+Lois+Brandt"
+                    href="https://www.goodreads.com/book/show/6189162-a-coat-a-cap-and-a-smart-little-hat"
                     target="_blank"
                     rel="noopener"
-                    >Maddi's Fridge</a
+                    >A Coat, a Cap, and a Smart Little Hat — A. Knudsen</a
                   >
                 </p>
-                <p>
-                  Lois Brandt &amp; Vin Vogel: Using the theme of friendship,
-                  Lois Brandt &amp; Vin Vogel model empathy, quiet kindness, and
-                  the bravery to seek assistance.
-                </p>
+                <p>Helps children understand sharing and community support.</p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/search?q=Last+Stop+on+Market+Street"
+                    href="https://www.goodreads.com/book/show/43912059-yasmin-the-recycler"
                     target="_blank"
                     rel="noopener"
-                    >Last Stop on Market Street</a
+                    >Yasmin the Recycler — Saadia Faruqi</a
                   >
                 </p>
                 <p>
-                  Matt de la Peña &amp; Christian Robinson — establishes an
-                  understanding of empathy through the demonstration of beauty
-                  and connection in a community, irrespective of material
-                  wealth.
+                  Promotes resourcefulness and making do with what you have,
+                  fostering understanding of economic constraints.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's videos, shows &amp; podcasts</strong>
+              <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Video</span>
+                <span class="k">Audio</span>
                 <p class="title">
                   <a
-                    href="https://sesameworkshop.org"
+                    href="https://www.abc.net.au/abckids/listen/"
                     target="_blank"
                     rel="noopener"
-                    >Sesame Street — Growing Hope Against Hunger</a
+                    >ABC Kids Listen — "Noisy by Nature"</a
                   >
                 </p>
                 <p>
-                  Raises empathy and understanding of the issue of food
-                  insecurity by exploring Lily's story in the context of a group
-                  view and discussion.
+                  Free audio programs promoting imaginative play with nature
+                  that demonstrate that rich learning is free.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Video series</span>
-                <p class="title">
-                  <a
-                    href="https://sesameworkshop.org/topics/homelessness/"
-                    target="_blank"
-                    rel="noopener"
-                    >Sesame Workshop — Homelessness resources</a
-                  >
-                </p>
-                <p>
-                  Teacher-led videos designed to promote understanding and
-                  resilience in children during housing instability, in both
-                  English and another language.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">TV series</span>
+                <span class="k">TV Episode</span>
                 <p class="title">
                   <a
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School — “Swap and Share”</a
+                    >Play School (ABC iView) — "Helping Hands" episode</a
                   >
                 </p>
                 <p>
-                  An ABC episode that teaches community generosity and empathy -
-                  the ideas of giving, receiving, and re-using.
+                  Shows community members helping one another, building
+                  children's empathy and understanding of community support
+                  systems.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Video</span>
+                <span class="k">Podcast</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
+                    href="https://www.emergingminds.com.au/resources/podcasts/"
                     target="_blank"
                     rel="noopener"
-                    >Play School Story Time readings</a
+                    >Emerging Minds Podcast — Child-aware practice</a
                   >
                 </p>
                 <p>
-                  Shares reading comprehension skills, suitable for use during
-                  grade time when a book isn't available in front of them.
+                  Discusses how to talk to children about family stress in
+                  age-appropriate ways.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Podcast</span>
+                <p class="title">
+                  <a
+                    href="https://theearlyeducationshow.com"
+                    target="_blank"
+                    rel="noopener"
+                    >The Early Education Show</a
+                  >
+                </p>
+                <p>
+                  Discusses equity in ECE; educators use these to reflect on
+                  their own biases regarding poverty.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- SOCIAL -->
+        <!-- ==================== SOCIAL ==================== -->
         <section class="view" id="social">
           <span class="tag-chip social"
             ><span class="tag-dot"></span>Social Contexts</span
           >
           <h1 class="page-title">
-            Separation, Isolation &amp; Out-of-Home Care
+            High-Conflict Divorce/Separation and Out-of-Home Care
           </h1>
           <p class="lede">
-            The impact of the breakdown of relationships, of being taken out of
-            the family's social network and from the family home on a young
-            child's sense of safety and belonging.
+            Exploring how family breakdown, custody disputes, and out-of-home
+            placements affect a young child's sense of safety and belonging.
           </p>
 
           <div class="subtabs">
-            <a href="#social-family" class="subtab" data-anchor="social-family"
-              >Family Types</a
-            >
             <a
               href="#social-understanding"
               class="subtab"
@@ -1352,66 +1225,45 @@
             >
           </div>
 
-          <div class="family-card" id="social-family">
-            <h2>Family Types in This Context</h2>
-            <div class="family-type">
-              <span class="ftname"
-                >Separated and divorced families with shared care</span
-              >Children who are separated or divorced from their parents usually
-              live with both parents and are in two homes. Helpful, low-ebb
-              communication between these parents and service, on a regular
-              basis, helps ease this adjustment.
-            </div>
-            <div class="family-type">
-              <span class="ftname">Kinship and foster care families</span>There
-              may be information the carers have about the child, but that may
-              not be sufficient, as they are placed away from their birth
-              parents – kinship or foster parents. For these children, it is not
-              unusual for them to have to get used to multiple new surroundings:
-              new home, new school, and new community.
-            </div>
-          </div>
-
           <div class="card" id="social-understanding">
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
-              Social context involves a family's relationships and supports
-              (whether they are maintained, broken up, or affected by statutory
-              involvement). Not so unusual occurrences – 52.2 per thousand
-              Aboriginal and Torres Strait Islander children are in out-of-home
-              care, and the number continues to grow, above the National
-              Aboriginal and Torres Strait Islander Children's Care and Survival
-              Council target of 10 per thousand (Blackstock et al., 2020).
+              In this section, families from a high-conflict divorce/separation
+              and children in Out-of-Home Care (OOHC) are explored.
+              High-conflict divorce is a conflict characterized by constant
+              fighting from both parents and frequent changes in living because
+              of the conflict. Children in OOHC are those who have been taken
+              from their biological parents because of concerns about their
+              safety and placed with another family member or foster family
+              (McNamara et al., 2019).
             </p>
             <p>
-              Understanding why consistent, responsive relationships are
-              important in early childhood is explained through attachment
-              theory – disrupted relationships through conflict, separation, or
-              over changes of home can affect the internal working model that
-              the child has about relationships (Bacro &amp; Macario de
-              Medeiros, 2021). The chronosystem is an additional one: the events
-              do not happen at a single moment only, but take place over time;
-              their influence accumulates over the period of time. It's worth
-              noting here that it isn't separation, but conflict as it happens
-              that most accurately determines the child's adjustment.
+              It is important to recognise these contexts in ECE as they are a
+              factor that can impact on the primary attachment relationships.
+              According to Bowlby's Attachment Theory (Bowlby et al., 1956), a
+              secure primary attachment is the basis for emotional regulation. A
+              secure base is compromised by fracturing of family structures.
+              Current research identifies that the nature of Australian society
+              also has evolved, with an increase in blended and kinship care
+              families, meaning that ECE services need to be highly flexible and
+              accept that the concept of "family" is flexible.
             </p>
           </div>
 
           <div class="card" id="social-impact">
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
-              In young children, parental conflict and changing caring routines
-              are associated with disorganised attachment patterns and, even in
-              the absence of conflict, a significant change in caregiving
-              context can result in temporary separation anxiety and/or issues
-              with regulation (Bacro &amp; Macario de Medeiros, 2021).
-              Out-of-home placements often involve a shift from parents to a
-              placement that is disconnected from parents, and children will
-              often bring relational trauma with them (Laurens et al., 2020).
-              There is also an indirect risk with social isolation because
-              parents with few social relationships receive less support from
-              others, and this is related to the level of parenting strain and
-              to the decrease of parent-child interaction.
+              The impact of high conflict divorce and OOHC placements is
+              extremely detrimental to children's wellbeing (D'Onofrio & Emery,
+              2019). They often feel confused, guilty, or grieving, and may
+              regress in their behaviour (wetting the bed, for instance), have
+              trouble paying attention and be anxious with peers. Aggressive
+              outbursts or withdrawal may become evident on transition days
+              between homes for ECE services. Services are required to deal with
+              complicated legal issues and incorporate family court directions
+              in relation to authorised pickups (Knight & Rossi, 2018). The ECE
+              environment can become an important, stable, predictable setting
+              and educators need to scaffold emotionally.
             </p>
           </div>
 
@@ -1420,63 +1272,56 @@
               <span class="num">03</span>Social Policy and Australian Responses
             </h2>
             <p>
-              Safe and Supported is the National Framework for the Protection of
-              Australia's Children 2021 - 2031, which has a First Action Plan
-              for Aboriginal and Torres Strait Islander children. There was an
-              amendment to NSW's 2026 budget that abolished the strict
-              reunification timescale, and Victoria's 2025 budget committed $1.2
-              billion to child protection and $797 million to out-of-home care.
-              Despite investment there is little progress on Aboriginal
-              over-representation and more power is needed for Aboriginal
-              Community Controlled Organisations. It is essential that
-              educators, caseworkers and carers are prepared for unexpected
-              changes, particularly at the time of reunion.
+              Post separation, parental responsibilities are regulated by the
+              Family Law Act 1975, which emphasises what is in the child's best
+              interests (Mcintosh & Booth, 2021). The National Framework for
+              Protecting Australia's Children 2021-2031 is the national child
+              protection strategy for OOHC. These policies have an impact on ECE
+              practice as they set boundaries for practice. The Family Law Act
+              sets requirements for ECE services to ensure that children are not
+              placed in unsafe exchanges of custody. The National Framework
+              reiterates the educator's obligation to be a mandatory reporter of
+              abuse or neglect.
             </p>
           </div>
 
           <div class="card" id="social-strategies">
             <h2><span class="num">04</span>Strategies for Practice</h2>
-            <ol>
+            <ul>
               <li>
-                <strong
-                  >Predictable routines and a stable key-educator
-                  relationship.</strong
-                >
-                Provide a secure and consistent sanctuary on the service
-                day—particularly helpful for children who are experiencing a
-                less predictable life at home.
+                <strong>Strict Authorisation Protocols:</strong> School staff
+                adhere to authorized Pickup Lists, pursuant to court orders.
+                This includes having physical copies stored at the front desk so
+                that staff do not give a child to a noncustodial parent,
+                avoiding the child from getting caught up in an upsetting
+                situation.
               </li>
               <li>
-                <strong>Separate, low-conflict communication channels.</strong>
-                Use individual take-home diaries or apps/photographs so that a
-                child is never at the centre of their parents' communication.
+                <strong>Emotion Coaching:</strong> Teachers use the "Zones of
+                Regulation" to teach emotional language. A child's response to
+                an out of control behaviour after a foster visit is validated:
+                "I see you're in the red zone, it's difficult when your routine
+                changes, it's ok, you are feeling emotions."
               </li>
               <li>
-                <strong
-                  >Trauma-informed enrolment and transition practices.</strong
-                >
-                Do not adopt the first day-in-caretenant approach with children
-                entering care, but rather have a primary caregiving approach and
-                an unhurried, gradual settling-in period.
+                <strong>Predictable Daily Rituals:</strong> Educators make
+                individualized visual schedules to balance instability. When
+                people arrive, reviewing this establishes a sense of safety and
+                predictability.
               </li>
               <li>
-                <strong
-                  >Deliberate connection-building for isolated families.</strong
-                >
-                Identify low-key, informal venues/sessions for parents to think
-                about expanding their social network, such as a drop-in morning
-                tea or playgroup.
+                <strong>"Safe Space" Transitions:</strong> A quiet corner, rich
+                with sensory items, is created for children distressed as a
+                result of a change in custody. The educator takes the child to
+                this place to relax, then brings them back to the group.
               </li>
               <li>
-                <strong
-                  >Collaborative, privacy-appropriate information
-                  sharing.</strong
-                >
-                Implement simple procedures with case workers/carers and inform
-                educators what impact the child is having, but do not provide
-                any more detail than is necessary.
+                <strong>Inclusive Language:</strong> Teachers avoid
+                overgeneralization of terms, such as "grown-ups" instead of "mum
+                and dad" and respect that various family structures are valid,
+                but do not make a child the focus of the question.
               </li>
-            </ol>
+            </ul>
           </div>
 
           <div class="card" id="social-partnerships">
@@ -1487,58 +1332,65 @@
               <li>
                 <strong
                   ><a
-                    href="https://www.barnardos.org.au/"
+                    href="https://www.ag.gov.au/families-and-marriage/family-relationships-centres"
                     target="_blank"
                     rel="noopener"
-                    >Barnardos Australia</a
+                    >Family Relationship Centres (FRCs)</a
                   ></strong
                 >
-                — Provides family support, kinship care and fostering services
-                and helps to ensure that children are not placed in care unless
-                this is safe to do.
+                — State-funded centres that assist separating parents in
+                negotiating parenting plans.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.relationships.org.au/"
+                    href="https://www.facs.nsw.gov.au/families/child-protection"
                     target="_blank"
                     rel="noopener"
-                    >Relationships Australia</a
+                    >DCJ / Child Protection Caseworkers</a
                   ></strong
                 >
-                — Provides choices and options for families to refer to services
-                for family relationship counselling, mediation and
-                post-separation parenting support.
+                — Oversee children in OOHC. Educators collaborate by sharing
+                observational reports on the child's development and behaviour.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.playgroupaustralia.org.au/"
+                    href="https://create.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Playgroup Australia</a
+                    >CREATE Foundation</a
                   ></strong
                 >
-                — A low-cost, low-barrier method of "social connections"
-                introduction to isolated families with young children.
+                — A national organisation advocating for children in OOHC. ECE
+                services access their resources to understand foster children's
+                needs.
               </li>
               <li>
                 <strong
-                  >Aboriginal Community Controlled Organisations (e.g., state
-                  peak bodies affiliated with SNAICC)</strong
+                  ><a
+                    href="https://www.kinshipcarersnsw.asn.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Kinship Care Support Services</a
+                  ></strong
                 >
-                — Provide culturally-safe family support and be an active member
-                of reunification and prevention activities in First Nations
-                families.
+                — Supports relatives raising children. ECE services collaborate
+                by offering flexible drop-off times or connecting carers with
+                respite care.
               </li>
               <li>
                 <strong
-                  >Local Community and Family Support / targeted early
-                  intervention providers</strong
+                  ><a
+                    href="https://www.aapa.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Play Therapists</a
+                  ></strong
                 >
-                — A system moving fairly, but also coordinated, by the
-                government of providing case management, counselling and
-                practical support to families, before it reaches crisis.
+                — Professionals using play to help children process trauma. ECE
+                educators collaborate to align the child's emotional goals
+                across both environments.
               </li>
             </ul>
           </div>
@@ -1547,227 +1399,222 @@
             <h2>
               <span class="num">06</span>Resources for Educators and Children
             </h2>
-            <p><strong>Projects, programs &amp; websites</strong></p>
+            <p><strong>Projects, Programs &amp; Websites</strong></p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Website</span>
+                <span class="k">Organisation</span>
                 <p class="title">
                   <a
-                    href="https://www.familyrelationships.gov.au/"
+                    href="https://www.relationships.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Family Relationships Online (Relationships Australia)</a
+                    >Relationships Australia</a
                   >
                 </p>
                 <p>
-                  Resources for parents to read that clarify and explain the
-                  impact of separation and divorce on young children.
+                  Provides family dispute resolution; provides resources to
+                  separating parents to reduce conflict.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Program</span>
+                <span class="k">Resource Hub</span>
                 <p class="title">
                   <a
-                    href="https://www.barnardos.org.au/programs-services/"
+                    href="https://aifs.gov.au/cfca"
                     target="_blank"
                     rel="noopener"
-                    >Barnardos family support &amp; playgroups</a
+                    >Child Family Community Australia (CFCA)</a
                   >
                 </p>
                 <p>
-                  Designed to strengthen families, home-based and centre-based
-                  practical support.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Network</span>
-                <p class="title">
-                  <a
-                    href="https://www.playgroupaustralia.org.au/"
-                    target="_blank"
-                    rel="noopener"
-                    >Playgroup Australia</a
-                  >
-                </p>
-                <p>
-                  Community-based playgroups provide opportunities for
-                  connectedness and resilience within the context of
-                  disconnected families.
+                  Provides evidence-based resources for professionals working
+                  with children in OOHC.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Website</span>
                 <p class="title">
                   <a
-                    href="https://raisingchildren.net.au/grown-ups-father/divorce-separation"
+                    href="https://raisingchildren.net.au"
                     target="_blank"
                     rel="noopener"
-                    >Raising Children Network — separation &amp; divorce</a
+                    >Raising Children Network</a
                   >
                 </p>
                 <p>
-                  Information based on evidence to assist parents to understand
-                  how they can support the children during separation.
+                  Features sections on divorce and step-families, which
+                  educators link to in newsletters.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Training</span>
+                <p class="title">
+                  <a
+                    href="https://www.emergingminds.com.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Emerging Minds</a
+                  >
+                </p>
+                <p>
+                  Offers online training for educators on supporting children
+                  who have experienced trauma.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's storybooks (birth–5)</strong>
+              <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/book/show/120354.Two_Homes"
+                    href="https://www.goodreads.com/book/show/995852.Two_Homes"
                     target="_blank"
                     rel="noopener"
-                    >Two Homes</a
+                    >Two Homes — Claire Masurel</a
                   >
                 </p>
                 <p>
-                  Claire Masurel &amp; Kady MacDonald Denton — works with
-                  children to develop positive attitudes and knowledge about
-                  transitioning between two loving homes.
+                  Addresses divorce. It helps children realize that they can be
+                  loved and safe in two different homes, used by educators to
+                  that end.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/book/show/1069827.Living_with_Mom_and_Living_with_Dad"
+                    href="https://www.goodreads.com/book/show/983540.The_Invisible_String"
                     target="_blank"
                     rel="noopener"
-                    >Living with Mom and Living with Dad</a
+                    >The Invisible String — Patrice Karst</a
                   >
                 </p>
                 <p>
-                  Melanie Walsh — Shared care is introduced by Melanie Walsh in
-                  a simple, easy-to-follow format with a lift-the-flap.
+                  Teaches that love connects us even when apart. Used to comfort
+                  a child missing a biological parent.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/book/show/945923.Kids_Need_to_Be_Safe"
+                    href="https://www.goodreads.com/book/show/31608198-a-family-is-a-family-is-a-family"
                     target="_blank"
                     rel="noopener"
-                    >Kids Need to Be Safe</a
+                    >A Family Is a Family Is a Family — Sara O'Leary</a
                   >
                 </p>
                 <p>
-                  Julie Nelson — gently provides information on foster care that
-                  supports children in strengthening their resilience and
-                  reducing their worry.
+                  Normalises diverse family structures, building empathy and
+                  ensuring all children feel represented.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
                 <p class="title">
                   <a
-                    href="https://www.goodreads.com/book/show/548024.The_Invisible_String"
+                    href="https://www.goodreads.com/book/show/1028694.Families_Change"
                     target="_blank"
                     rel="noopener"
-                    >The Invisible String</a
+                    >Families Change — Julie Nelson</a
                   >
                 </p>
                 <p>
-                  Patrice Karst — teaches children that love and connection span
-                  distance and time.
+                  Helps children understand change. Educators use it to support
+                  resilience by showing difficult moments can be managed.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's videos, shows &amp; podcasts</strong>
+              <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Video</span>
-                <p class="title">
-                  <a
-                    href="https://sesameworkshop.org/topics/divorce/"
-                    target="_blank"
-                    rel="noopener"
-                    >Little Children, Big Challenges: Divorce</a
-                  >
-                </p>
-                <p>
-                  A Sesame Workshop film that will allow Abby Cadabby to share
-                  her thoughts and feelings about an unfamiliar circumstance –
-                  her parents separating from one another – with a trusted
-                  adult, preferably one-on-one.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Video</span>
-                <p class="title">
-                  <a
-                    href="https://sesameworkshop.org/topics/expressing-emotions/"
-                    target="_blank"
-                    rel="noopener"
-                    >Sesame Street in Communities — Expressing Feelings</a
-                  >
-                </p>
-                <p>
-                  Develops emotional awareness and supports children
-                  transitioning between two homes to name and regulate large
-                  emotions.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">TV segment</span>
+                <span class="k">TV Episode</span>
                 <p class="title">
                   <a
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School — “My Family, Your Family”</a
+                    >Play School (ABC iView) — "Families" episode</a
                   >
                 </p>
                 <p>
-                  A segment on ABC that shows blended, adoptive, extended, and
-                  same sex parent families as normal and valuable families.
+                  Demonstrates different family structures. It can be used by
+                  educators as a starting point for conversation about a variety
+                  of homes and carers.
                 </p>
               </div>
               <div class="res">
-                <span class="k">TV episode</span>
+                <span class="k">Podcast</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
+                    href="https://www.abc.net.au/abckids/listen/"
                     target="_blank"
                     rel="noopener"
-                    >Play School — “Where I Belong”</a
+                    >ABC Kids Listen — "Little Kids, Big Kids"</a
                   >
                 </p>
                 <p>
-                  An ABC programme that develops a more positive and normal
-                  acceptance of different family units.
+                  Focuses on navigating big emotions and transitions, played
+                  during quiet time to build resilience.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Podcast</span>
+                <p class="title">
+                  <a
+                    href="https://theseedpod.com.au"
+                    target="_blank"
+                    rel="noopener"
+                    >The SEED Pod Podcast</a
+                  >
+                </p>
+                <p>
+                  Includes information about supporting children whose family is
+                  breaking up, and for teacher training.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Video Series</span>
+                <p class="title">
+                  <a
+                    href="https://sesamestreetincommunities.org/topics/divorce/"
+                    target="_blank"
+                    rel="noopener"
+                    >Sesame Street in Communities — "Handling Divorce"</a
+                  >
+                </p>
+                <p>
+                  Offers child-friendly animations. Educators show these to help
+                  children express feelings about family changes.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- CULTURAL & DIVERSITY -->
+        <!-- ==================== CULTURAL & DIVERSITY ==================== -->
         <section class="view" id="cult">
           <span class="tag-chip cult"
             ><span class="tag-dot"></span>Cultural &amp; Diversity
             Contexts</span
           >
           <h1 class="page-title">
-            First Nations, Migrant &amp; Refugee Families
+            First Nations Families and Refugee Families
           </h1>
           <p class="lede">
-            The impact of personal cultural identity, language and the
-            settlement journey on the sense of belonging of a young child and
-            what culturally safe practice might mean in a setting in Australia.
+            Understanding how cultural identity, colonisation, and forced
+            displacement shape children's experiences in early childhood
+            settings.
           </p>
 
           <div class="subtabs">
-            <a href="#cult-family" class="subtab" data-anchor="cult-family"
-              >Family Types</a
-            >
             <a
               href="#cult-understanding"
               class="subtab"
@@ -1800,66 +1647,45 @@
             >
           </div>
 
-          <div class="family-card" id="cult-family">
-            <h2>Family Types in This Context</h2>
-            <div class="family-type">
-              <span class="ftname"
-                >Aboriginal and Torres Strait Islander families</span
-              >Many Aboriginal and Torres Strait Islander families are extended
-              families and community-based and are intergenerational. Children's
-              wellbeing and sense of identity are strengthened by their
-              cultural, language and Country connection.
-            </div>
-            <div class="family-type">
-              <span class="ftname">Refugee/migrant families</span
-              >Refugee/migrant families may be new arrivals or in the process of
-              becoming settled, and may be adjusting to a new language and new
-              system, while at the same time facing trauma prior to departure,
-              and the separation from family still overseas, as well as very
-              real challenges of living in Australia.
-            </div>
-          </div>
-
           <div class="card" id="cult-understanding">
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
-              Cultural and diversity contexts involve Aboriginal, Torres Strait
-              Islander, migrant and refugee families who have a different
-              language and culture from the dominant service culture, as well as
-              a different worldview. Almost one-third of Australians speak a
-              language other than English. The national plan has an ambitious
-              objective of 95% participation across the year before school for
-              Aboriginal and Torres Strait Islander children, with participation
-              on varying scales across the regions. The macrosystem (broader
-              culture, norms, laws) makes sense of the disconnects between
-              family and service culture that can diminish participation.
-              Culturally Responsive Pedagogy is rooted in and uses cultural
-              difference as a curriculum resource, not simply as a superficial
-              fix. (Sisson et al., 2020). Refugee-background families commonly
-              face a disintegration of the family system and continuing
-              difficulties forming social and economic life with young children
-              when they settle (Lamb, 2020).
+              In this section, First Nations families and refugee families are
+              discussed. First Nations families experience the continuing
+              effects of colonization and continue to live with strong cultural
+              traditions. Refugee families are defined as people who are forced
+              to leave their home country because of persecution or violence,
+              and then come to Australia.
+            </p>
+            <p>
+              It is important that a child's understanding of these contexts is
+              evident in ECE as culture is the basis of a child's identity and
+              learning. According to Sociocultural Theory of Vygotsky, cognitive
+              development is strongly related to social and cultural contexts
+              (Vygotsky, 2019). These families bring a vast amount of cultural
+              capital with them and they are not being seen and understood in a
+              deficit way by educators. Australian society is evolving with a
+              growing Aboriginal and Torres Strait Islander population and
+              ongoing humanitarian migration movements and ECE services need to
+              proactively change to ensure they are truly inclusive, culturally
+              safe and supportive environments.
             </p>
           </div>
 
           <div class="card" id="cult-impact">
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
-              Racism and discrimination (social or systemic) can compound or add
-              to trauma, reduce trust in Mainstream services, and impact the
-              wellbeing of First Nations children (Sisson et al., 2020). Refugee
-              and migrant families frequently are concurrent at multiple risk
-              points – displacement, settlement, and limited English proficiency
-              and often deal with various stressors during the years children
-              are developing the most – with flow-on effects to parenting.
-            </p>
-            <p>
-              This is a measurable access gap, as children from migrant and
-              refugee backgrounds are half as likely to access
-              early-intervention services like speech therapy when there is a
-              need. Inadequate enrolment is more likely a lack of confidence, or
-              experience with being turned down for enrolment in the system,
-              than a lack of interest (Lamb, 2020).
+              Failure of ECE environments to value and accept families' culture
+              can create loss of identity, low self-esteem and disaffection in
+              children (Lamb, 2020). Children in care may be exposed to systemic
+              racism, refugee children to trauma and language barriers, and
+              these factors can have a negative effect on their emotional
+              health, peer relationships and play engagement. In the case of ECE
+              services, educators need to be aware that a child's silence might
+              be a culturally respectful behaviour, and not a developmental
+              delay (Lamb, 2020). Services need to critically examine and
+              understand their own environments and ensure that they do not
+              reinforce biases and tokenise cultures.
             </p>
           </div>
 
@@ -1868,64 +1694,55 @@
               <span class="num">03</span>Social Policy and Australian Responses
             </h2>
             <p>
-              There is a Gap between 95% of Aboriginal and Torres Strait
-              Islander children in the year before school and 0%, with the
-              National Agreement for Closing the Gap setting this as a target.
-              Aboriginal Community Controlled services are supported with NSW
-              First Steps and Sector Strengthening Partnerships and research
-              demonstrates that they provide better outcomes than externally
-              delivered services. Humanitarian Settlement Program provides case
-              management and practical support for migrant and refugee families
-              and local schools for 18 months. These frameworks support practice
-              in terms of cultural safety training, interpreter access and
-              connection to local services when they are not available.
+              Culturally competent practice and recognition of the history of
+              Aboriginal and Torres Strait Islanders is required by the Early
+              Years Learning Framework (EYLF) (DoE, 2022). In addition, the
+              National Anti-Racism Framework offers a national approach to
+              systemic racism. These policies shift culture from a voluntary to
+              a mandatory professional aspect. The EYLF makes the requirement to
+              embed First Nations perspectives into practice every day,
+              including by requiring the use of local Indigenous languages in
+              routines, and providing access to translated materials for refugee
+              families.
             </p>
           </div>
 
           <div class="card" id="cult-strategies">
             <h2><span class="num">04</span>Strategies for Practice</h2>
-            <ol>
+            <ul>
               <li>
-                <strong
-                  >Embed First Nations perspectives daily, not just for NAIDOC
-                  Week.</strong
-                >
-                Incorporate Acknowledgement of Country, utilize local language
-                (where appropriate); strongly advocate for the use of culturally
-                appropriate resources from Aboriginal-owned publishers in both
-                everyday practices and on a regular basis.
+                <strong>Embed Local First Nations Languages:</strong> Teachers
+                work with local Elders to learn and practice greetings and
+                counting in traditional language. It is clearly reflecting the
+                importance of First Nations culture, and instills pride in
+                Indigenous children and respect for Country.
               </li>
               <li>
-                <strong>Partner with bicultural and bilingual workers.</strong>
-                Always utilize professional interpreters when enrolling,
-                orienting, or having important conversations — never use a child
-                or family member as an interpreter.
+                <strong>"Funds of Knowledge" Approach:</strong> Parents are
+                called up to share family skills, such as weaving, cooking, etc.
+                with the children in this service, a recognition of the family's
+                cultural capital and an increase in child confidence.
               </li>
               <li>
-                <strong>Assess and access funds of knowledge.</strong> Extend
-                families' input into the curriculum in their own language,
-                stories, food, and celebrations, and not just during one
-                “cultural day”.
+                <strong>Trauma-Informed Transitions:</strong> Educators provide
+                low sensory, predictable transition areas for refugee children
+                who are going through trauma. The use of visual schedules and
+                providing a quiet "cave" area when feeling overwhelmed.
               </li>
               <li>
-                <strong
-                  >Build staff cultural safety through ongoing reflective
-                  practice.</strong
-                >
-                Conduct ongoing examination of assumptions and biases as a team,
-                rather than assume cultural competence is an "event" that can
-                just be delivered at one point in time.
+                <strong>Critically Audit Learning Materials:</strong> Educators
+                review books to ensure authentic, non-stereotypical
+                representations. They remove stereotypical materials and replace
+                them with books showing resettled families in modern homes,
+                countering biases.
               </li>
               <li>
-                <strong
-                  >Allow flexible, patient orientation for newly arrived
-                  families.</strong
-                >
-                Utilise visual supports, give reasonable time, and do not assume
-                understanding when discussing how the Australian early childhood
-                system works.
+                <strong>Bilingual Communication:</strong> Educators use
+                translation apps or visual boards to speak with refugee families
+                in their home language, ensuring parents understand educational
+                goals and fostering respectful partnerships.
               </li>
-            </ol>
+            </ul>
           </div>
 
           <div class="card" id="cult-partnerships">
@@ -1936,48 +1753,67 @@
               <li>
                 <strong
                   ><a
-                    href="https://www.snaicc.org.au/"
+                    href="https://www.alc.org.au"
                     target="_blank"
                     rel="noopener"
-                    >SNAICC – National Voice for our Children</a
+                    >Local Aboriginal Land Council / Elders</a
                   ></strong
                 >
-                — The national peak body for culturally safe early childhood
-                practice and Aboriginal-led service delivery.
-              </li>
-              <li>
-                <strong
-                  >Local Aboriginal Community Controlled Organisation (e.g., the
-                  Victorian Aboriginal Child Care Agency)</strong
-                >
-                — Provides culturally based family and early years services and
-                can lead a service on a journey towards cultural safety.
+                — Cultural authorities who guide the service. ECE services
+                collaborate by inviting Elders to conduct Welcome to Country and
+                advise on local histories.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.ames.net.au/"
+                    href="https://www.startts.org.au"
                     target="_blank"
                     rel="noopener"
-                    >AMES Australia / Settlement Services International</a
+                    >STARTTS</a
                   ></strong
                 >
-                — Offers settlement case management, English language assistance
-                and connection with the community to refugee and migrant
-                families.
-              </li>
-              <li>
-                <strong>Local multicultural resource centre</strong> — Provides
-                Interpreting services and multicultural playgroups for newly
-                arrived families to help connect them with informal networks.
+                — A specialised service for trauma survivors. ECE services
+                collaborate by attending training to support traumatised
+                children and referring families for counselling.
               </li>
               <li>
                 <strong
-                  >Specialist torture and trauma support services (e.g., STARTTS
-                  in NSW)</strong
+                  ><a
+                    href="https://www.snaicc.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >SNAICC</a
+                  ></strong
                 >
-                — provide trauma-informed counselling services for refugee
-                background families to which services can refer.
+                — The national peak body for First Nations children. ECE
+                services use their resources to align practices with Aboriginal
+                child-rearing principles.
+              </li>
+              <li>
+                <strong
+                  ><a
+                    href="https://www.migrationcouncil.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Local Migrant Resource Centres (MRCs)</a
+                  ></strong
+                >
+                — Provide settlement support and English classes. ECE services
+                collaborate by co-hosting events or referring newly arrived
+                families.
+              </li>
+              <li>
+                <strong
+                  ><a
+                    href="https://www.ecia.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Bicultural Support Workers</a
+                  ></strong
+                >
+                — Bilingual professionals who support specific families.
+                Services collaborate to facilitate enrolment interviews and help
+                children settle in their mother tongue.
               </li>
             </ul>
           </div>
@@ -1986,188 +1822,223 @@
             <h2>
               <span class="num">06</span>Resources for Educators and Children
             </h2>
-            <p><strong>Projects, programs &amp; websites</strong></p>
+            <p><strong>Projects, Programs &amp; Websites</strong></p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Framework</span>
-                <p class="title">Aboriginal Cultural Safety Framework (NSW)</p>
-                <p>
-                  A practical approach that develops a service's understanding
-                  of how to be a true welcoming service for Aboriginal children
-                  and families.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Program</span>
+                <span class="k">Resource</span>
                 <p class="title">
                   <a
-                    href="https://www.snaicc.org.au/"
+                    href="https://www.snaicc.org.au/resources/working-and-walking-together/"
                     target="_blank"
                     rel="noopener"
-                    >SNAICC Sector Strengthening</a
+                    >SNAICC — "Working and Walking Together"</a
                   >
                 </p>
                 <p>
-                  Helps to build the cultural understanding of educators;
-                  supports Ab Maidu (Aboriginal Community Controlled early
-                  learning services).
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Program</span>
-                <p class="title">Multicultural Supported Playgroups</p>
-                <p>
-                  Semi-structured playgroups to foster connection and belonging
-                  for newly arrived families and children 0-5.
+                  Educators use this to guide partnerships with First Nations
+                  families.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Website</span>
                 <p class="title">
                   <a
-                    href="https://www.ames.net.au/"
+                    href="https://raisingchildren.net.au"
                     target="_blank"
                     rel="noopener"
-                    >AMES Australia</a
+                    >Raising Children Network — Translated Parenting
+                    Information</a
                   >
                 </p>
                 <p>
-                  Details about individual settlement experiences that support
-                  educators' understanding of newcomer families' contexts.
-                </p>
-              </div>
-            </div>
-            <p style="margin-top: 1.2rem">
-              <strong>Children's storybooks (birth–5)</strong>
-            </p>
-            <div class="resource-grid">
-              <div class="res">
-                <span class="k">Storybook</span>
-                <p class="title">Respect</p>
-                <p>
-                  Aunty Fay Muir &amp; Sue Lawson — gently introduces children
-                  to a core principle of Aboriginal and Torres Strait Islander
-                  culture through simple images and text.
+                  Educators share these links with refugee families to support
+                  home-learning.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Storybook</span>
-                <p class="title">Welcome to Country</p>
-                <p>
-                  Aunty Joy Murphy &amp; Lisa Kennedy — A video designed to give
-                  a young person an understanding of the nature of a Welcome to
-                  Country and its significance.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Storybook</span>
-                <p class="title">My Two Blankets</p>
-                <p>
-                  Irena Kobald &amp; Freya Blackwood — develops empathy with an
-                  Australian refugee resettlement story of language and
-                  belonging.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Storybook</span>
-                <p class="title">Teacup</p>
-                <p>
-                  Rebecca Young &amp; Matt Ottley — tender allegory to help
-                  children to feel and understand the journey to a new place.
-                </p>
-              </div>
-            </div>
-            <p style="margin-top: 1.2rem">
-              <strong>Children's videos, shows &amp; podcasts</strong>
-            </p>
-            <div class="resource-grid">
-              <div class="res">
-                <span class="k">TV series</span>
+                <span class="k">Organisation</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/little-j-big-cuz/"
+                    href="https://www.refugeecouncil.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Little J &amp; Big Cuz</a
+                    >Refugee Council of Australia</a
                   >
                 </p>
                 <p>
-                  An NITV/ABC series written and performed by First Nations
-                  talent that fosters cultural pride and awareness as two
-                  Aboriginal children venture into culture, community and
-                  Country.
+                  Provides statistics; educators use this data to inform their
+                  service's inclusion policies.
                 </p>
               </div>
               <div class="res">
-                <span class="k">TV episode</span>
+                <span class="k">Program</span>
+                <p class="title">
+                  <a
+                    href="https://www.narragunnawali.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Reconciliation Australia — Narragunnawali</a
+                  >
+                </p>
+                <p>
+                  Offers resources educators use to develop a Reconciliation
+                  Action Plan (RAP).
+                </p>
+              </div>
+            </div>
+
+            <p style="margin-top: 1.2rem">
+              <strong>Children's Storybooks (Birth–5 years)</strong>
+            </p>
+            <div class="resource-grid">
+              <div class="res">
+                <span class="k">Storybook</span>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/36235643-welcome-to-country"
+                    target="_blank"
+                    rel="noopener"
+                    >Welcome to Country — Aunty Joy Murphy</a
+                  >
+                </p>
+                <p>
+                  Introduces First Nations protocols. Educators use it to teach
+                  respect for traditional owners and build understanding of
+                  cultural safety.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Storybook</span>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/11214395-the-little-refugee"
+                    target="_blank"
+                    rel="noopener"
+                    >The Little Refugee — Anh Do</a
+                  >
+                </p>
+                <p>
+                  Tells a story of resilience. Educators use it to help children
+                  understand the refugee journey and build empathy.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Storybook</span>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/184619.Whoever_You_Are"
+                    target="_blank"
+                    rel="noopener"
+                    >Whoever You Are — Mem Fox</a
+                  >
+                </p>
+                <p>
+                  Points out that although we may look different, our hearts are
+                  the same. Teachers employ it as a resource to enhance their
+                  students' awareness of human emotions universal to all.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Storybook</span>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/36073505-my-culture-and-me"
+                    target="_blank"
+                    rel="noopener"
+                    >My Culture and Me — Gregg Dreise</a
+                  >
+                </p>
+                <p>
+                  Celebrates First Nations pride. Educators use it to affirm
+                  Indigenous identity and foster respect in non-Indigenous
+                  children.
+                </p>
+              </div>
+            </div>
+
+            <p style="margin-top: 1.2rem">
+              <strong>Children's Videos, Shows &amp; Podcasts</strong>
+            </p>
+            <div class="resource-grid">
+              <div class="res">
+                <span class="k">TV Series</span>
+                <p class="title">
+                  <a
+                    href="https://www.abc.net.au/abckids/shows/little-j-and-big-cuz/"
+                    target="_blank"
+                    rel="noopener"
+                    >Little J & Big Cuz (NITV/ABC)</a
+                  >
+                </p>
+                <p>
+                  A programming initiative that depicts today's First Nations
+                  life in animation. Teachers demonstrate clips to normalise and
+                  celebrate Indigenous culture.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">TV Episode</span>
                 <p class="title">
                   <a
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School — “Walking Together”</a
+                    >Play School (ABC) — "Looking Forward" episode</a
                   >
                 </p>
                 <p>
-                  The ABC episode that was producing new awareness and attitudes
-                  toward Aboriginal and Torres Strait Islander culture, in the
-                  early stages of Reconciliation Week.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Video</span>
-                <p class="title">
-                  <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
-                    target="_blank"
-                    rel="noopener"
-                    >Play School Story Time — My Two Blankets</a
-                  >
-                </p>
-                <p>
-                  Develops kindness through group discussion about 'new
-                  beginnings'.
+                  Explores diverse cultures. Educators use it to spark
+                  discussions about different ways families live and celebrate.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Podcast</span>
                 <p class="title">
                   <a
-                    href="https://www.sbs.com.au/podcasts"
+                    href="https://www.snaicc.org.au/resources/snaicc-podcast/"
                     target="_blank"
                     rel="noopener"
-                    >My Bilingual Family</a
+                    >SNAICC Podcast</a
                   >
                 </p>
                 <p>
-                  An SBS Audio podcast to raise teacher-language-bouncing the
-                  knowledge of working with CALD families and raising children
-                  in more languages.
+                  For educator professional development; discusses best
+                  practices for working with First Nations families.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Audio</span>
+                <p class="title">
+                  <a
+                    href="https://www.abc.net.au/abckids/listen/"
+                    target="_blank"
+                    rel="noopener"
+                    >ABC Kids Listen — "Story Salad" episodes</a
+                  >
+                </p>
+                <p>
+                  A recording of stories with different stories. Children hear
+                  these played by educators during rest time to introduce them
+                  to other languages and stories.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- HEALTH & WELLBEING -->
+        <!-- ==================== HEALTH & WELLBEING ==================== -->
         <section class="view" id="health">
           <span class="tag-chip health"
             ><span class="tag-dot"></span>Health &amp; Wellbeing Contexts</span
           >
-          <h1 class="page-title">
-            Parental Mental Illness, Substance Use, Grief &amp; Trauma
-          </h1>
+          <h1 class="page-title">Parental Mental Illness, Grief and Trauma</h1>
           <p class="lede">
-            Awareness of the impact that the health and wellbeing issues within
-            a family can have on a young child's sense of safety and the role
-            services can play in providing a consistent care experience, not
-            just when a crisis occurs.
+            Exploring how parental mental health challenges, childhood grief,
+            and traumatic events affect development and how educators can
+            provide safe, supportive environments.
           </p>
 
           <div class="subtabs">
-            <a href="#health-family" class="subtab" data-anchor="health-family"
-              >Family Types</a
-            >
             <a
               href="#health-understanding"
               class="subtab"
@@ -2200,57 +2071,47 @@
             >
           </div>
 
-          <div class="family-card" id="health-family">
-            <h2>Family Types in This Context</h2>
-            <div class="family-type">
-              <span class="ftname"
-                >Families experiencing parental mental illness</span
-              >Many Australian families with children have a parent suffering
-              mental illness. The parents' ability to care for their child can
-              change as the child becomes more ill, and children within these
-              families may be doing more than is appropriate for their age.
-            </div>
-            <div class="family-type">
-              <span class="ftname"
-                >Families experiencing substance use, grief or trauma</span
-              >Parents who have a history of substance use or unresolved grief
-              may have inconsistent or substandard parenting that increases the
-              risk for neglect or instability. These families typically require
-              ongoing, non-judgemental support, rather than a quick fix.
-            </div>
-          </div>
-
           <div class="card" id="health-understanding">
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
-              Many Australian families are affected by various health and
-              wellbeing concerns such as parental mental illness, substance
-              abuse, trauma, loss and abuse. Almost 40% of adults experience
-              adverse childhood events, 22% prior to age 10, and more than one
-              million children have an adult parent suffering from mental
-              illness (Crouch et al., 2019). Witnessing family violence, sexual
-              assault and bereavement are common traumas (Emerging Minds &amp;
-              ANU, 2020). The effects of adverse childhood experiences (ACEs)
-              are dose-dependent, with greater and earlier exposures leading to
-              greater long-term health effects. In attachment and trauma theory,
-              caregivers who experience illness and/or substance abuse can have
-              a difficult time remaining available, which can impact the
-              developing brain of young children (Letcher et al., 2020). . This
-              has informed Australia's 2018 national children's mental health
-              strategy.
+              This section looks at families with a parent who has severe mental
+              illness and children who are experiencing grief and trauma. Mental
+              illness can affect a parent's ability to be consistent and
+              responsive. Grief and trauma are used to describe a child's
+              emotional reactions to loss or events that are so upsetting they
+              are beyond the child's coping mechanisms.
+            </p>
+            <p>
+              In ECE it is important to understand these contexts as health and
+              wellbeing are inextricably linked with cognitive development. In
+              Bronfenbrenner's Bioecological Model, the parent's mental illness
+              affects "proximal processes" within the microsystem and negatively
+              impacts outcomes. Trauma Theory (Perry, 2006) highlights the
+              developmental changes in the brain due to chronic stress, impacts
+              the amygdala and prefrontal cortex. Recent Australian studies
+              suggest that parents experienced psychological distress in the
+              aftermath of COVID-19 which is likely to increase in the current
+              times, and educators will play a significant role in helping
+              children to cope with psychological distress.
             </p>
           </div>
 
           <div class="card" id="health-impact">
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
-              A mental illness among parents increases the risk of family
-              dysfunction and of having to care for the parent at an age
-              inappropriate for them (Letcher et al., 2020). Parental drug and
-              alcohol use also increases the risk of neglect and ongoing
-              substance-use issues, and family violence exposure is linked to
-              poor educational outcomes, less social engagement, and increased
-              service use by adults (Emerging Minds &amp; ANU, 2020).
+              Mental illness and trauma can have a significant effect on the
+              development of a child when the parents have been affected.
+              "Parentification" — when children assume responsibility for
+              caregiving — can contribute to anxiety and missing milestones
+              (Kamis, 2020). Emotional dysregulation can result from trauma,
+              either in the form of hyperarousal (aggression) or dissociation
+              (withdrawal). They are unable to concentrate, play and develop
+              close friendships. In the case of ECE services, the educators
+              might observe emotional outbursts, which vary from time to time,
+              regressive behaviours such as a loss of language, or a deep
+              withdrawal. Services need to be a secure base — a safe, low stress
+              environment to counterbalance the chaos or sadness that is often
+              felt at home (Bowlby, 1969).
             </p>
           </div>
 
@@ -2259,54 +2120,59 @@
               <span class="num">03</span>Social Policy and Australian Responses
             </h2>
             <p>
-              Australia's world-first Department of Health mental health and
-              wellbeing strategy for children (birth to age 12 years) has been
-              implemented in 2021 and is supported by investment in Head to
-              Health Kids centres and an increased focus on perinatal mental
-              health supports for children. National guidance now includes
-              mental health screening as a regular part of the early childhood
-              health checks from 2025, and the Be You programme also supports
-              services to implement a wellbeing plan rather than managing
-              individual situations.
+              Be You (Beyond Blue) has developed the National Mental Health and
+              Wellbeing Framework for ECE settings to support the development of
+              mental health. One in five adults in Australia now has a mental
+              illness, with the impact of mental illness on parents being
+              reflected in these statistics. These policies are based on the
+              concept of pedagogy and incorporate a trauma-informed perspective.
+              Be You provides services with the resources to develop mental
+              health literacy, moving away from a "managing behaviour" approach
+              and focus on understanding the trauma drivers. This means teachers
+              need to see challenging behaviours as dysregulated stress
+              responses or need to co-regulate these responses.
             </p>
           </div>
 
           <div class="card" id="health-strategies">
             <h2><span class="num">04</span>Strategies for Practice</h2>
-            <ol>
+            <ul>
               <li>
-                <strong>Trauma-informed, predictable environments.</strong> Make
-                use of familiar routines, visual schedules and calming
-                transitions to minimize a dysregulated child's expectations of
-                the world to go crazy around without warning.
+                <strong>Predictable Routines and Visual Schedules:</strong>
+                Visual schedules are used by teachers to balance
+                unpredictability. When arriving, provide the child with a visual
+                timeline to assure them what is coming next and to promote
+                safety and decrease anxiety.
               </li>
               <li>
-                <strong>Co-regulation before correction.</strong> Take time to
-                help calm down a child before dealing with behaviour issues so
-                that they are in a space where they can reflect on their
-                behaviour.
+                <strong>Emotion Coaching:</strong> The use of "Zones of
+                Regulation" is used as a framework for teaching emotional
+                vocabulary. If a child is in the red zone, educator support
+                emotional regulation and resilience by saying, "I see you are in
+                the red zone, let's take deep breaths together."
               </li>
               <li>
-                <strong>Whole-team wellbeing planning.</strong> Have a
-                service-wide wellbeing strategy in place, with supporting
-                documentation, and based on the Be You approach rather than
-                giving staff freedom to respond individually.
+                <strong>Co-Regulation in a Sensory Space:</strong> Teachers help
+                a child with hyperarousal to settle in a quiet, dimly lit room
+                with weighted blankets. The educator stays with the child and
+                speaks in a calming tone to help the child's nervous system
+                return to baseline.
               </li>
               <li>
-                <strong
-                  >Sensitive, non-judgemental conversations with
-                  parents.</strong
-                >
-                Normalise the reporting of mental health issues or addiction
-                problems to family members and ensure that people know that the
-                service is for support, not judgment.
+                <strong>"Check-In" System:</strong> Educators utilize an
+                emotions check-in chart (name to the emotions face). This
+                enables teachers to observe a child's emotional level each day
+                and adjust expectations accordingly for the child's level of
+                engagement.
               </li>
               <li>
-                <strong>Warm referral to specialist supports.</strong> Link
-                families to specialist services, e.g. Emerging Minds/COPMI and
-                PANDA (direct access).
+                <strong>Strength-Based Communication:</strong> Educators work
+                with a mentally ill parent in a strengths-based approach. When
+                starting a conversation, it's better to begin with positive
+                comments instead of concerns, as this minimizes parental shame
+                and helps to capture parental attention.
               </li>
-            </ol>
+            </ul>
           </div>
 
           <div class="card" id="health-partnerships">
@@ -2317,52 +2183,64 @@
               <li>
                 <strong
                   ><a
-                    href="https://emergingminds.com.au/"
+                    href="https://www.emergingminds.com.au"
                     target="_blank"
                     rel="noopener"
-                    >Emerging Minds / COPMI</a
+                    >Emerging Minds</a
                   ></strong
                 >
-                — National service and information centre for children who have
-                parents with a mental illness and their families.
+                — Specialises in child and family mental health. ECE services
+                collaborate by accessing free online training and sharing
+                resources with parents.
+              </li>
+              <li>
+                <strong
+                  ><a href="https://beyou.edu.au" target="_blank" rel="noopener"
+                    >Beyond Blue (Be You)</a
+                  ></strong
+                >
+                — Provides mental health support frameworks. Services
+                collaborate by registering their team for Be You, accessing
+                consultants to support practice.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.panda.org.au/"
+                    href="https://www.cyh.com.au"
                     target="_blank"
                     rel="noopener"
-                    >PANDA (Perinatal Anxiety &amp; Depression Australia)</a
+                    >Local Child and Family Health Services (CaFHS)</a
                   ></strong
                 >
-                — Lead National Organisation for anyone who is pregnant and/or
-                within six months of giving birth who is feeling anxious and/or
-                depressed.
-              </li>
-              <li>
-                <strong>Local Child and Family Health nursing services</strong>
-                — A non-stigmatising, universal contact point, well situated to
-                identify and listen to children at an early age and make a
-                gentle referral.
+                — Provide developmental assessments and counselling. ECE
+                educators collaborate by making warm referrals when trauma
+                severely impacts development.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://kookaburrakids.org.au/"
+                    href="https://www.headtohealth.gov.au"
                     target="_blank"
                     rel="noopener"
-                    >Kookaburra Kids</a
+                    >Head to Health</a
                   ></strong
                 >
-                — Offers peer support and free camps for kids with a family
-                member who is suffering from a Mental Disorder.
+                — A free national service connecting adults with mental health
+                support. ECE services provide this information confidentially to
+                struggling parents.
               </li>
               <li>
                 <strong
-                  >Local trauma and family violence counselling services (e.g.,
-                  the Blue Knot Foundation)</strong
+                  ><a
+                    href="https://www.aapa.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Play Therapists</a
+                  ></strong
                 >
-                — professional services the family is referred to, if any.
+                — Professionals supporting children processing severe trauma.
+                ECE services collaborate to align the child's emotional goals
+                and sensory strategies across both environments.
               </li>
             </ul>
           </div>
@@ -2371,191 +2249,222 @@
             <h2>
               <span class="num">06</span>Resources for Educators and Children
             </h2>
-            <p><strong>Projects, programs &amp; websites</strong></p>
+            <p><strong>Projects, Programs &amp; Websites</strong></p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Website</span>
+                <span class="k">Platform</span>
                 <p class="title">
-                  <a
-                    href="https://emergingminds.com.au/"
-                    target="_blank"
-                    rel="noopener"
-                    >COPMI (Emerging Minds)</a
-                  >
-                </p>
-                <p>
-                  Support to develop understanding and resilience for children,
-                  parents and professionals involved with parental mental
-                  health.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Program</span>
-                <p class="title">
-                  <a href="https://beyou.edu.au/" target="_blank" rel="noopener"
+                  <a href="https://beyou.edu.au" target="_blank" rel="noopener"
                     >Be You</a
                   >
                 </p>
                 <p>
-                  A national wellbeing framework to support services to
-                  proactively build children's resilience, in addition to
-                  responding when there is a crisis.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Guidelines</span>
-                <p class="title">
-                  National mental health guidelines for early childhood health
-                  checks
-                </p>
-                <p>
-                  An action-oriented approach to creating understanding between
-                  teachers and health care providers.
+                  ECE services use this platform to develop a whole-of-service
+                  Mental Health and Wellbeing Policy.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Website</span>
                 <p class="title">
                   <a
-                    href="https://sesameworkshop.org/topics/parental-addiction/"
+                    href="https://raisingchildren.net.au"
                     target="_blank"
                     rel="noopener"
-                    >Sesame Street in Communities — Parental Addiction</a
+                    >Raising Children Network</a
                   >
                 </p>
                 <p>
-                  Bilingual videos, storybooks, and activities available free to
-                  build understanding and resilience in children 1-6 years of
-                  age.
+                  Provides articles on helping children grieve; educators share
+                  links with parents to support consistent messaging.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Guides</span>
+                <p class="title">
+                  <a
+                    href="https://www.emergingminds.com.au/resources/child-aware-practice/"
+                    target="_blank"
+                    rel="noopener"
+                    >Emerging Minds — "Child-Aware Practice"</a
+                  >
+                </p>
+                <p>
+                  Educators use these to reflect on discussing parental mental
+                  illness without stigma.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Service</span>
+                <p class="title">
+                  <a
+                    href="https://kidshelpline.com.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Kids Helpline</a
+                  >
+                </p>
+                <p>
+                  Resources used by educators to guide conversations with young
+                  children experiencing severe distress.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's storybooks (birth–5)</strong>
+              <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">When Sadness Is at Your Door</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/1015916.The_Huge_Bag_of_Worries"
+                    target="_blank"
+                    rel="noopener"
+                    >The Huge Bag of Worries — Virginia Ironside</a
+                  >
+                </p>
                 <p>
-                  Eva Eland — Takes time to help children to name and sit with
-                  sorrow, instead of fear.
+                  Helps children externalise anxiety. Educators use it to teach
+                  that they can share worries with a trusted adult, promoting
+                  resilience.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">Ruby's Worry</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/36235459-when-sadness-is-at-your-door"
+                    target="_blank"
+                    rel="noopener"
+                    >When Sadness Is at Your Door — Eva Eland</a
+                  >
+                </p>
                 <p>
-                  Tom Percival — helps introduce anxiety in a child-friendly
-                  manner, demonstrates interaction with a caring adult about
-                  anxiety issues, teaches resilience.
+                  Normalises sadness. Educators use it to help a grieving child
+                  understand it is okay to feel sad, building emotional
+                  understanding.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">The Rabbit Listened</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/17678899-the-memory-tree"
+                    target="_blank"
+                    rel="noopener"
+                    >The Memory Tree — Britta Teckentrup</a
+                  >
+                </p>
                 <p>
-                  Cori Doerrfeld — creates empathy by just being present and
-                  compassionate with another who is grieving or upset.
+                  Deals gently with death. Educators read this to support a
+                  child processing grief, helping them find comfort in memories.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">Lifetimes</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/1014877.A_Terrible_Thing_Happened"
+                    target="_blank"
+                    rel="noopener"
+                    >A Terrible Thing Happened — Margaret M. Holmes</a
+                  >
+                </p>
                 <p>
-                  Bryan Mellonie &amp; Robert Ingpen — A reassuring, accessible
-                  presentation of death for children.
+                  For children who witnessed trauma. Educators use it to help
+                  children open up about feelings safely without needing
+                  specific words.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's videos, shows &amp; podcasts</strong>
+              <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Video series</span>
+                <span class="k">TV Episode</span>
                 <p class="title">
                   <a
-                    href="https://sesameworkshop.org/topics/parental-addiction/"
+                    href="https://www.abc.net.au/abckids/shows/daniel-tigers-neighbourhood/"
                     target="_blank"
                     rel="noopener"
-                    >Sesame Street in Communities — Karli's story</a
+                    >Daniel Tiger's Neighborhood (ABC iView)</a
                   >
                 </p>
                 <p>
-                  Children feel less isolated and less responsible through the
-                  Muppet Karli, a kid of an addicted parent, who acts as a
-                  character to build their empathy, learning, and resilience.
+                  Short musical episodes on emotional regulation. Educators use
+                  songs to help children self-soothe.
                 </p>
               </div>
               <div class="res">
-                <span class="k">TV episode</span>
+                <span class="k">Audio</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
+                    href="https://www.abc.net.au/abckids/listen/"
                     target="_blank"
                     rel="noopener"
-                    >Play School — grief episode.</a
+                    >ABC Kids Listen — Mindfulness Tracks</a
                   >
                 </p>
                 <p>
-                  The exceedingly talked about episode of ABC in 2019 that had a
-                  discussion about the death of a grandparent in a gentle and
-                  non-threatening manner.
+                  Audio guides teaching breathing and body awareness. Educators
+                  play these during group time to help dysregulated children
+                  calm their nervous systems.
                 </p>
               </div>
               <div class="res">
-                <span class="k">TV series</span>
+                <span class="k">Podcast</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
+                    href="https://theearlyeducationshow.com"
                     target="_blank"
                     rel="noopener"
-                    >Play School — “Faces and Feelings”</a
+                    >The Early Education Show</a
                   >
                 </p>
                 <p>
-                  An ABC Awareness Building Series that aims to name and
-                  recognise feelings through emotions.
+                  Features episodes on trauma-informed practice. Educators
+                  listen for professional development to better understand
+                  trauma responses.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Video</span>
+                <span class="k">App</span>
                 <p class="title">
                   <a
-                    href="https://www.abc.net.au/abckids/shows/play-school/"
+                    href="https://www.headspace.com"
                     target="_blank"
                     rel="noopener"
-                    >Play School Story Time — When Sadness Is at Your Door</a
+                    >Headspace App (Kids Section)</a
                   >
                 </p>
                 <p>
-                  Develops understanding in a group through naming, sitting
-                  with, and talking about big feelings.
+                  Provides guided meditations. Educators use these audio tracks
+                  during rest time to create a calming, safe sensory environment
+                  for anxious children.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- CRISIS & EMERGENCY -->
+        <!-- ==================== CRISIS & EMERGENCY ==================== -->
         <section class="view" id="crisis">
           <span class="tag-chip crisis"
             ><span class="tag-dot"></span>Crisis &amp; Emergency Contexts</span
           >
           <h1 class="page-title">
-            Disaster, Displacement &amp; Family Violence
+            Natural Disasters and Domestic and Family Violence
           </h1>
           <p class="lede">
-            The impact of climate change disasters, as well as family violence
-            and family displacement, on the sense of safety of young children,
-            and how services can act before, during and after a crisis.
+            Examining how sudden displacement from disasters and the coercion of
+            domestic violence shatter a child's sense of safety, and how
+            services can act as stabilising forces.
           </p>
 
           <div class="subtabs">
-            <a href="#crisis-family" class="subtab" data-anchor="crisis-family"
-              >Family Types</a
-            >
             <a
               href="#crisis-understanding"
               class="subtab"
@@ -2588,69 +2497,46 @@
             >
           </div>
 
-          <div class="family-card" id="crisis-family">
-            <h2>Family Types in This Context</h2>
-            <div class="family-type">
-              <span class="ftname">Families displaced by natural disasters</span
-              >Families displaced by bushfire, flood or cyclone almost
-              invariably are forced to seek temporary or permanent new homes and
-              face the loss of their house, their normal way of life, belongings
-              and social networks – all in one.
-            </div>
-            <div class="family-type">
-              <span class="ftname">Families experiencing family violence</span
-              >Often, family violence survivors in families are led by parents
-              who have been travelling from an unsafe home, or are planning to
-              leave. Support needs to be undertaken with care and based on the
-              principles of safety planning, confidentiality and sensitive
-              information sharing.
-            </div>
-          </div>
-
           <div class="card" id="crisis-understanding">
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
-              Crisis and/or emergency contexts refer to natural disasters
-              exacerbated by climate change as well as family and domestic and
-              sexual violence, and resultant displacement. Children are a
-              disproportionately large part of the casualties of climate
-              disasters, with, on average, more than 1.4 million (one in six)
-              children affected by them each year (McGill et al., 2023), and
-              those children most vulnerable tend to live in remote areas, with
-              low socio-economic status and Indigenous communities. As a
-              consequence, each year 800,000 days of early learning
-              opportunities are lost.
+              This section explores families displaced by natural disasters
+              (such as bushfires or floods) and families experiencing domestic
+              and family violence (DFV). Natural disasters cause sudden
+              displacement and loss of property. DFV is characterised by
+              coercive, controlling behaviour, often requiring families to flee
+              suddenly to seek safety.
             </p>
             <p>
-              The Harvard Center on the Developing Child's Toxic Stress Model is
-              the more prominent explanation for how crisis could impact
-              development (Center on the Developing Child at Harvard University,
-              2020). It sets aside normal, temporary activation of stress
-              systems from those that occur repeatedly in time or forever
-              without a supportive adult to buffer them — something that sooner
-              or later can cause disruption to the developing brain
-              architecture. Violence and disasters constitute another form of
-              jolting change to a child's world, from home to service to
-              community, that could be placed in Bronfenbrenner's chronosystem
-              (Zhang &amp; Han, 2020).
+              A knowledge of these contexts is important in ECE as both are
+              sudden and dramatic challenges to a child's sense of safety.
+              Within Maslow's Hierarchy of Needs theory (Booth, 2024),
+              physiological and safety needs need to be addressed before a child
+              can attend to the needs of belonging or learning. In both cases
+              basic safety is broken down. Modern research indicates that the
+              natural disaster environment is increasing in terms of its
+              frequency in Australia due to the changing climate, adding to
+              family stress. At the same time, DFV is an ongoing problem, and
+              ECE services have a role to play as key pillars of stability
+              following a crisis (Xu et al., 2023).
             </p>
           </div>
 
           <div class="card" id="crisis-impact">
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
-              Some crisis contexts are climate disasters, family violence, and
-              displacement. Over 1.4 million children are affected annually,
-              with vulnerable groups in remote, low-income, and Indigenous
-              communities losing 800,000 early learning days yearly (McGill et
-              al., 2023). The Toxic Stress Model identifies two types of stress:
-              one that can be managed by adults and the other that is prolonged
-              in the absence of adults who can support the child's development,
-              thereby disrupting brain development (Center on the Developing
-              Child at Harvard University, 2020). Sudden change is caused by
-              violence and disasters across the home, service, and community
-              setting, as described by Bronfenbrenner's chronosystem ( Zhang
-              &amp; Han, 2020).
+              Sudden crises profoundly impact children's wellbeing. The lack of
+              predictability and violence triggers acute stress, trauma and
+              hyperarousal (Eadie et al., 2021). Children may have difficulties
+              sleeping, have a high attachment to or separation anxiety from the
+              parent, and regress in skill development (speech, potty training)
+              (Gildersleeve et al., 2022). They might repeat their play which
+              reinforces the crisis, affecting their peers' play and cognition.
+              If providing ECE services, educators might observe sudden shifts
+              in behaviour, distress during transitions or aggressive outbursts
+              (Meyer et al., 2021). Services need to address sudden withdrawal,
+              work with children who have lost their homes and follow safety
+              measures if a violent parent tries to access the service.
             </p>
           </div>
 
@@ -2659,64 +2545,60 @@
               <span class="num">03</span>Social Policy and Australian Responses
             </h2>
             <p>
-              The National Plan to End Violence against Women and Children
-              2022-2032 was enhanced by the inclusion of a dedicated First
-              Nations plan, Our Ways – Strong Ways – Our Voice, in February
-              2026, in recognition of the disproportionate levels of violence
-              that Aboriginal and Torres Strait Islander women and children
-              face. There is a national child-centred approach to recovery, to
-              support and draw on the Australian Institute for Disaster
-              Resilience's national recovery principles, and other
-              organisations, including Emerging Minds, have introduced
-              disaster-specific elements to national wellbeing frameworks.
+              Key responses are the National Plan to End Violence against Women
+              and Children 2022–2032 and the Disaster Recovery Funding
+              Arrangements (DRFA). According to AIHW (2023), statistically, 1 in
+              6 women will be physically or sexually violated by a current or
+              former partner (Department of Social Services, 2022). Such
+              policies include rigorous safety measures. The National Plan
+              requires ECE services to have domestic violence safety plans,
+              which must include strict pick up procedures. The DRFA enables ECE
+              services to serve as community recovery hubs, waiving fees or
+              offering emergency placements to children who have been displaced,
+              until their parents can recover, giving children a safe place to
+              be while parents recover.
             </p>
           </div>
 
           <div class="card" id="crisis-strategies">
             <h2><span class="num">04</span>Strategies for Practice</h2>
-            <ol>
+            <ul>
               <li>
-                <strong
-                  >Embed age-appropriate disaster preparedness into the
-                  curriculum.</strong
-                >
-                Red Cross Pillowcase Workshops allow children to feel that they
-                have some control over how they prepare themselves for disaster,
-                instead of a sense of fear.
+                <strong>Strict Safety Protocols:</strong> In the case of DFV
+                contexts, teachers implement court mandates. This includes
+                maintaining a photo of the non-custodial parent at the front
+                desk, staff members promptly locking doors and alerting the
+                police if the doors are unlocked, and physically ensuring that
+                the child is protected.
               </li>
               <li>
-                <strong
-                  >Protect routine and predictability immediately after a
-                  crisis.</strong
-                >
-                Invariably, schedules and familiar caring relationships indicate
-                maximum chances for a child recovering.
+                <strong>"Safe Base" Transition Space:</strong> Educators have a
+                quiet corner for displaced children that has sensory tools
+                available. The educator sits with the child to provide physical
+                co-regulation and eases the child out of hyperarousal into
+                safety.
               </li>
               <li>
-                <strong
-                  >Use trauma-informed, child-led recovery activities.</strong
-                >
-                Assistive activities such as the “Birdie” nest provide the child
-                with the opportunity to process his or her experience by
-                playing.
+                <strong>Expressive Play Opportunities:</strong> Teachers offer
+                open-ended resources such as sand or blocks. The educator sits
+                beside a child as they relive a flood and has patience to
+                support the child in processing their trauma and building
+                resilience ("The people are safe now").
               </li>
               <li>
-                <strong
-                  >Build a documented family violence response protocol.</strong
-                >
-                Have safe enrolment and collection procedures written and ensure
-                staff are trained to recognise and respond to play cues that
-                indicate disclosure.
+                <strong>Predictable Daily Rituals:</strong> Teachers take time
+                to explicitly discuss the daily schedule to counteract chaos.
+                Use a visual timeline and remind them, "First morning tea, then
+                you go home with grandma."
               </li>
               <li>
-                <strong
-                  >Coordinate directly with emergency and family violence
-                  services.</strong
-                >
-                Develop these partnerships before a crisis happens to ease the
-                way for referral paths when one does.
+                <strong>Practical Material Support:</strong> Educators, in a
+                discreet manner, present "care packs" of spare clothes/donated
+                toys for families in displacement. This non-judgmental support
+                helps to decrease parental stress and has a positive effect on
+                the emotional state of the child.
               </li>
-            </ol>
+            </ul>
           </div>
 
           <div class="card" id="crisis-partnerships">
@@ -2727,58 +2609,67 @@
               <li>
                 <strong
                   ><a
-                    href="https://emergingminds.com.au/"
+                    href="https://www.1800respect.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Emerging Minds</a
+                    >1800RESPECT</a
                   ></strong
                 >
-                — Durations will be shorter on disaster-specific mental health
-                tools and resources for children/educators, including the
-                Community Trauma Toolkit.
+                — The national DFV counselling service. ECE services collaborate
+                by displaying their materials in private spaces and referring
+                parents to their 24/7 helpline for safety planning.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.redcross.org.au/"
+                    href="https://www.womensrefuge.com.au"
+                    target="_blank"
+                    rel="noopener"
+                    >Local Women's Refuges</a
+                  ></strong
+                >
+                — Provide emergency accommodation. ECE services collaborate by
+                offering flexible, immediate enrolment for children residing at
+                the refuge, ensuring continuity of care.
+              </li>
+              <li>
+                <strong
+                  ><a
+                    href="https://www.redcross.org.au"
                     target="_blank"
                     rel="noopener"
                     >Australian Red Cross</a
                   ></strong
                 >
-                — Provides support at the Emergency Evacuation Centre,
-                Pillowcase Workshops and child-friendly centres.
-              </li>
-              <li>
-                <strong
-                  >Local family, domestic and sexual violence service</strong
-                >
-                — Hands-on specialist safety planning and counselling, or offers
-                a pathway services can signpost families to.
+                — Vital in disaster recovery. ECE services collaborate by
+                hosting Red Cross recovery sessions or distributing emergency
+                financial aid vouchers to displaced families.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://www.royalfarwest.org.au/"
+                    href="https://www.aidr.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Royal Far West</a
+                    >Local Government Emergency Management Officers</a
                   ></strong
                 >
-                — Implements a self-resourcing bushfire/disaster recovery
-                programme for the wellbeing of young children.
+                — Coordinate disaster response. Services collaborate by
+                registering their facility as a relief centre and attending
+                local disaster meetings.
               </li>
               <li>
                 <strong
                   ><a
-                    href="https://beyou.edu.au/"
+                    href="https://www.facs.nsw.gov.au/families/child-protection"
                     target="_blank"
                     rel="noopener"
-                    >Be You</a
+                    >DCJ Caseworkers</a
                   ></strong
                 >
-                — A national wellbeing framework that underpins services
-                responding to disaster or community trauma.
+                — Manage the safety of children experiencing severe DFV.
+                Educators collaborate by providing detailed, objective
+                observational reports to assist in risk assessments.
               </li>
             </ul>
           </div>
@@ -2787,347 +2678,444 @@
             <h2>
               <span class="num">06</span>Resources for Educators and Children
             </h2>
-            <p><strong>Projects, programs &amp; websites</strong></p>
+            <p><strong>Projects, Programs &amp; Websites</strong></p>
             <div class="resource-grid">
-              <div class="res">
-                <span class="k">Program</span>
-                <p class="title">
-                  <a
-                    href="https://www.childrenshealth.qld.gov.au/chq/our-services/community-health-services/birdies-tree"
-                    target="_blank"
-                    rel="noopener"
-                    >Birdie's Tree</a
-                  >
-                </p>
-                <p>
-                  A digital storybook and therapeutic games for children and
-                  young children to build resilience and learning following
-                  natural disasters.
-                </p>
-              </div>
               <div class="res">
                 <span class="k">Toolkit</span>
                 <p class="title">
                   <a
-                    href="https://emergingminds.com.au/resources/toolkits/community-trauma-toolkit/"
+                    href="https://www.emergingminds.com.au/resources/community-trauma-toolkit/"
                     target="_blank"
                     rel="noopener"
-                    >Emerging Minds Community Trauma Toolkit</a
+                    >Emerging Minds — Community Trauma Toolkit</a
                   >
                 </p>
                 <p>
-                  Increases educator understanding and confidence in being able
-                  to support children following a disaster or traumatic event.
+                  An evidence-based toolkit. Educators use this to prepare for,
+                  respond to, and recover from natural disasters, shaping
+                  emergency policy.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Program</span>
+                <span class="k">Service</span>
                 <p class="title">
                   <a
-                    href="https://www.royalfarwest.org.au/"
+                    href="https://www.1800respect.org.au"
                     target="_blank"
                     rel="noopener"
-                    >Royal Far West Bushfire Recovery Program</a
+                    >1800RESPECT</a
                   >
                 </p>
                 <p>
-                  A system for creating bushfire and disaster resilience and
-                  wellbeing for young children.
+                  Provides resources on recognising DFV signs. Educators use
+                  these to inform mandatory reporting training and safely talk
+                  to parents.
                 </p>
               </div>
               <div class="res">
-                <span class="k">Workshops</span>
+                <span class="k">Resources</span>
                 <p class="title">
                   <a
-                    href="https://www.redcross.org.au/get-involved/prepare-for-disasters/pillowcase-project/"
+                    href="https://www.aidr.org.au"
                     target="_blank"
                     rel="noopener"
-                  >
-                    >Red Cross Pillowcase Workshops</a
+                    >Australian Institute for Disaster Resilience (AIDR)</a
                   >
                 </p>
                 <p>
-                  Develops children's sense of agency and resilience through
-                  disaster preparedness activities.
+                  Offers "Resilient Australia" resources. Educators use lesson
+                  plans to teach bushfire and flood safety in age-appropriate
+                  ways.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Templates</span>
+                <p class="title">
+                  <a
+                    href="https://www.safeandequal.org.au"
+                    target="_blank"
+                    rel="noopener"
+                    >DVRCV (Safe and Equal)</a
+                  >
+                </p>
+                <p>
+                  Provides safety planning templates. ECE services use these to
+                  develop individualised safety plans for children and custodial
+                  parents.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's storybooks (birth–5)</strong>
+              <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">Fire</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/17822468-flood"
+                    target="_blank"
+                    rel="noopener"
+                    >Flood — Jackie French</a
+                  >
+                </p>
                 <p>
-                  Jackie French &amp; Bruce Whatley — A story of resilience and
-                  hope written from the perspective of a cockatoo through a
-                  bushfire and out into the community for recovery.
+                  Illustrates surviving a flood. Educators use it to help
+                  children process their experience and build resilience by
+                  focusing on community rebuilding.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">Flood</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/36288029-my-body-what-i-say-goes"
+                    target="_blank"
+                    rel="noopener"
+                    >My Body! What I Say Goes! — Jayneen Sanders</a
+                  >
+                </p>
                 <p>
-                  Dimity Powell &amp; Nicky Johnston — builds empathy through an
-                  Australian picture book that blossoms in the unpredictable
-                  storm of family violence.
+                  Teaches body safety and consent. Educators use it to empower
+                  children to recognise unsafe situations, building personal
+                  safety understanding.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">At the End of Holyrood Lane</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/40890704-the-bushfire"
+                    target="_blank"
+                    rel="noopener"
+                    >The Bushfire — Andrew Lawson</a
+                  >
+                </p>
                 <p>
-                  Dimity Powell &amp; Nicky Johnston — builds empathy through an
-                  Australian picture book which blossoms in the unpredictable
-                  storm of family violence.
+                  Helps children understand bushfires. Educators read this to
+                  validate fear while highlighting firefighters, building trust
+                  in community helpers.
                 </p>
               </div>
               <div class="res">
                 <span class="k">Storybook</span>
-                <p class="title">Birdie and the Fire</p>
+                <p class="title">
+                  <a
+                    href="https://www.goodreads.com/book/show/963154.Rose_Meets_Mr_Wintergarten"
+                    target="_blank"
+                    rel="noopener"
+                    >Rose Meets Mr Wintergarten — Bob Graham</a
+                  >
+                </p>
                 <p>
-                  A socio-educational social story for the Queensland Government
-                  to help young children learn in a simple, comforting way about
-                  bushfires.
+                  A story about overcoming fear. Educators use it to build
+                  empathy and help children understand there are safe, caring
+                  adults after a crisis.
                 </p>
               </div>
             </div>
+
             <p style="margin-top: 1.2rem">
-              <strong>Children's videos, shows &amp; podcasts</strong>
+              <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
             <div class="resource-grid">
               <div class="res">
-                <span class="k">Video series</span>
-                <p class="title">
-                  <a
-                    href="https://www.childrenshealth.qld.gov.au/chq/our-services/community-health-services/birdies-tree"
-                    target="_blank"
-                    rel="noopener"
-                    >Birdie's Tree animations &amp; games</a
-                  >
-                </p>
-                <p>
-                  Resilience and learning support videos and therapeutic games
-                  for children and babies affected by a disaster.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Video</span>
-                <p class="title">
-                  <a
-                    href="https://sesameworkshop.org/topics/traumatic-experiences/"
-                    target="_blank"
-                    rel="noopener"
-                    >Sesame Street in Communities — Traumatic Experiences</a
-                  >
-                </p>
-                <p>
-                  Establishes understanding and resilience; able to help very
-                  young children deal with frightening or disturbing
-                  experiences, especially natural disasters.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Video</span>
-                <p class="title">
-                  <a
-                    href="https://www.redcross.org.au/get-involved/prepare-for-disasters/pillowcase-project/"
-                    target="_blank"
-                    rel="noopener"
-                    >Red Cross Pillowcase Workshop video</a
-                  >
-                </p>
-                <p>
-                  Prepares children for emergencies and helps them make a
-                  comfort packet in an age-appropriate, confident manner.
-                </p>
-              </div>
-              <div class="res">
-                <span class="k">Video</span>
+                <span class="k">TV Episode</span>
                 <p class="title">
                   <a
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School Story Time — Fire</a
+                    >Play School (ABC iView) — "Helpers" episode</a
                   >
                 </p>
                 <p>
-                  Develops knowledge based on group discussion about bushfire
-                  recovery and community.
+                  Showcases emergency services. Educators show this to help
+                  children feel safe and understand that people help during
+                  emergencies.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Audio</span>
+                <p class="title">
+                  <a
+                    href="https://www.abc.net.au/abckids/listen/"
+                    target="_blank"
+                    rel="noopener"
+                    >ABC Kids Listen — "Breathe In, Breathe Out" Tracks</a
+                  >
+                </p>
+                <p>
+                  Guided audio for breathing. Educators play these to help
+                  hyperaroused children regulate their nervous systems after a
+                  crisis.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Podcast</span>
+                <p class="title">
+                  <a
+                    href="https://www.emergingminds.com.au/resources/podcasts/"
+                    target="_blank"
+                    rel="noopener"
+                    >Emerging Minds Podcast — Trauma Episodes</a
+                  >
+                </p>
+                <p>
+                  For educator professional development; discusses how to
+                  support children immediately following a disaster or violence.
+                </p>
+              </div>
+              <div class="res">
+                <span class="k">Video</span>
+                <p class="title">
+                  <a
+                    href="https://www.bravehearts.org.au/education/dittos-keep-safe-adventure/"
+                    target="_blank"
+                    rel="noopener"
+                    >Bravehearts — "Ditto's Keep Safe Adventure" Show</a
+                  >
+                </p>
+                <p>
+                  An educational video teaching body safety. Educators use this
+                  to teach children about private parts and safe/unsafe secrets
+                  engagingly.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- REFERENCES -->
+        <!-- ==================== REFERENCES ==================== -->
         <section class="view" id="refs">
-          <span class="tag-chip" style="background: #ececec; color: #333"
-            ><span class="tag-dot" style="background: #999"></span
-            >Appendices</span
-          >
-          <h1 class="page-title">References</h1>
+          <p class="eyebrow">Appendix</p>
+          <h1 class="page-title">Reference List</h1>
           <p class="lede">
-            Full APA 7th edition reference list for all citations used
-            throughout the portfolio.
+            All sources cited throughout this portfolio, formatted in APA 7th
+            edition style.
           </p>
 
           <div class="card">
             <ul class="ref-list">
               <li>
-                Bacro, F., &amp; Macario de Medeiros, J. (2021). Externalizing
-                behaviors and attachment disorganization in children of
-                different-sex separated parents: The protective role of joint
-                physical custody.
-                <em>Scandinavian Journal of Psychology, 62</em>(1), 74–81.
-                https://doi.org/10.1111/SJOP.12681
+                Booth, J. (2024). A Theory Of Human Motivation, A. H. Maslow
+                (1943) (Maslow's Hierarchy Of Needs) A Perspective Review Of
+                Common Misconceptions And Notes On The Revisions.
+                <a
+                  href="https://doi.org/10.2139/SSRN.4968309"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.2139/SSRN.4968309</a
+                >
               </li>
               <li>
-                Blackstock, C., Bamblett, M., &amp; Black, C. (2020). Indigenous
-                ontology, international law and the application of the
-                Convention to the over-representation of Indigenous children in
-                out of home care in Canada and Australia.
-                <em>Child Abuse &amp; Neglect, 110</em>, 104587.
-                https://doi.org/10.1016/J.CHIABU.2020.104587
+                Bowlby, J. (1969). Attachment and loss: Vol. I. Attachment.
+                Basic Books.
               </li>
               <li>
-                Center on the Developing Child at Harvard University. (2020).
-                <em>Toxic Stress : What is toxic stress? Toxic Stress</em>.
-                Harvard University.
-                https://developingchild.harvard.edu/key-concept/toxic-stress/
+                Bowlby, J., Ainsworth, M., Boston, M., &amp; Rosenbluth, D.
+                (1956). The effects of mother‐child separation: A follow‐up
+                study. British Journal of Medical Psychology, 29(3–4), 211–247.
+                <a
+                  href="https://doi.org/10.1111/j.2044-8341.1956.tb00915.x"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1111/j.2044-8341.1956.tb00915.x</a
+                >
               </li>
               <li>
-                Centre for Community Child Health. (2020).
-                <em
-                  >Centre for Community Child Health : Centre for Community
-                  Child Health (CCCH)</em
-                >. The Royak Childdren’s Hospital Melbourne.
-                https://www.rch.org.au/ccch/
+                Bronfenbrenner, U. (2021). The ecology of human development.
+                Harvard University Press.
+                <a
+                  href="https://doi.org/10.2307/j.ctv26071r6"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.2307/j.ctv26071r6</a
+                >
               </li>
               <li>
-                Crouch, E., Radcliff, E., Strompolis, M., &amp; Srivastav, A.
-                (2019). Safe, Stable, and Nurtured: Protective Factors against
-                Poor Physical and Mental Health Outcomes Following Exposure to
-                Adverse Childhood Experiences (ACEs).
-                <em>Journal of Child and Adolescent Trauma, 12</em>(2), 165–173.
-                https://doi.org/10.1007/S40653-018-0217-9
+                Department of Social Services. (2022). National Plan to End
+                Violence against Women and Children. Australian Government.
+                <a
+                  href="https://www.dss.gov.au/national-plan-end-gender-based-violence"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.dss.gov.au/national-plan-end-gender-based-violence</a
+                >
               </li>
               <li>
-                Duncan, A. T. (2025). Duncan, A., &amp; Twomey, C. (2025).
-                <em
-                  >Child Poverty in Australia 2025: The current and future
-                  impacts of rising rates of financial deprivation on child
-                  wellbeing</em
-                >. Bankwest Curtin Economics Centre. . Child Poverty in
-                Australia 2025.
-                https://bcec.edu.au/publications/child-poverty-in-australia-2025/
+                D'Onofrio, B., &amp; Emery, R. (2019). Parental divorce or
+                separation and children's mental health. World Psychiatry,
+                18(1), 100.
+                <a
+                  href="https://doi.org/10.1002/wps.20590"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1002/wps.20590</a
+                >
               </li>
               <li>
-                Emerging Minds &amp; ANU. (2020).
-                <em
-                  >Adverse childhood experiences (ACEs): evidence - Emerging
-                  Minds</em
-                >. Emerging Minds.
-                https://emergingminds.com.au/resources/adverse-childhood-experiences-aces-summary-of-evidence-and-impacts/
+                Eadie, P., Levickis, P., Murray, L., Page, J., Elek, C., &amp;
+                Church, A. (2021). Early Childhood Educators' Wellbeing During
+                the COVID-19 Pandemic. Early Childhood Education Journal, 49(5),
+                903.
+                <a
+                  href="https://doi.org/10.1007/s10643-021-01203-3"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1007/s10643-021-01203-3</a
+                >
+              </li>
+              <li>
+                Gildersleeve, J., Cantrell, K., Bryce, I., Daken, K., Durham,
+                J., Mullens, A., Batorowicz, B., &amp; Johnson, R. (2022).
+                Coping with COVID: Pandemic narratives for Australian children.
+                Heliyon, 8(5), e09454.
+                <a
+                  href="https://doi.org/10.1016/j.heliyon.2022.e09454"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1016/j.heliyon.2022.e09454</a
+                >
+              </li>
+              <li>
+                Healy, K., Simpson Reeves, L., Venables, J., &amp; Nathanson, C.
+                (2025). Raising Queensland: Child and youth policy priorities.
+              </li>
+              <li>
+                Kamis, C. (2020). The Long-Term Impact of Parental Mental Health
+                on Children's Distress Trajectories in Adulthood. Society and
+                Mental Health, 11(1), 54.
+                <a
+                  href="https://doi.org/10.1177/2156869320912520"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1177/2156869320912520</a
+                >
+              </li>
+              <li>
+                Knight, R., &amp; Rossi, S. (2018). Children in out-of-home care
+                and their educational outcomes: A literature review.
+                <a
+                  href="https://doi.org/10.5204/rep.eprints.122389"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.5204/rep.eprints.122389</a
+                >
               </li>
               <li>
                 Lamb, C. S. (2020). Constructing early childhood services as
-                culturally credible trauma-recovery environments: participatory
-                barriers and enablers for refugee families.
-                <em>European Early Childhood Education Research Journal, 28</em
-                >(1), 129–148. https://doi.org/10.1080/1350293X.2020.1707368
+                culturally credible trauma-recovery environments: Participatory
+                barriers and enablers for refugee families. European Early
+                Childhood Education Research Journal, 28(1), 129–148.
+                <a
+                  href="https://doi.org/10.1080/1350293X.2020.1707368"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1080/1350293X.2020.1707368</a
+                >
               </li>
               <li>
-                Laurens, K. R., Islam, F., Kariuki, M., Harris, F., Chilvers,
-                M., Butler, M., Schofield, J., Essery, C., Brinkman, S. A.,
-                Carr, V. J., &amp; Green, M. J. (2020). Reading and numeracy
-                attainment of children reported to child protection services: A
-                population record linkage study controlling for other
-                adversities. <em>Child Abuse &amp; Neglect, 101</em>, 104326.
-                https://doi.org/10.1016/J.CHIABU.2019.104326
+                Mcintosh, J. E., &amp; Booth, A. T. (2021). Divorce and
+                separation: Special considerations for infants and toddlers in
+                separation/divorce: Developmental issues in the family law
+                context.
               </li>
               <li>
-                Letcher, P., Greenwood, C. J., Romaniuk, H., Spry, E.,
-                Macdonald, J. A., McAnally, H., Thomson, K. C., Youssef, G.,
-                Hutchinson, D., McIntosh, J., Sanson, A., Ryan, J., Edwards, B.,
-                Sligo, J., Hancox, R. J., Patton, G. C., &amp; Olsson, C. A.
-                (2020). Adolescent and young adult mental health problems and
-                infant offspring behavior: Findings from a prospective
-                intergenerational cohort study.
-                <em>Journal of Affective Disorders, 272</em>, 521–528.
-                https://doi.org/10.1016/J.JAD.2020.03.101
+                McNamara, P., Montserrat, C., &amp; Wise, S. (2019). Education
+                in out-of-home care. Children's Well-Being: Indicators and
+                Research, 22.
+                <a
+                  href="http://link.springer.com/10.1007/978-3-030-26372-0"
+                  target="_blank"
+                  rel="noopener"
+                  >http://link.springer.com/10.1007/978-3-030-26372-0</a
+                >
               </li>
               <li>
-                Masarik, A. S., &amp; Conger, R. D. (2017). Stress and child
-                development: a review of the Family Stress Model.
-                <em>Current Opinion in Psychology, 13</em>, 85–90.
-                https://doi.org/10.1016/J.COPSYC.2016.05.008
+                Meyer, S., Reeves, E., &amp; Fitz-Gibbon, K. (2021). What every
+                classroom educator needs to know about family and domestic
+                violence. Child and Family Social Work, 26(3), 476–484.
+                <a
+                  href="https://doi.org/10.1111/cfs.12830"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1111/cfs.12830</a
+                >
               </li>
               <li>
-                McGill, N., Verdon, S., Curtin, M., Crockett, J., Parnell, T.,
-                &amp; Hodgins, G. (2023). The impact of climate-related
-                disasters on children’s communication and wellbeing: Addressing
-                Sustainable Development Goals.
-                <em>International Journal of Speech-Language Pathology, 25</em
-                >(1), 20–26. https://doi.org/10.1080/17549507.2022.2156613
+                Nasr, R., Saab, S. A., Nasr, N., Haddad, C., Swaidan, E.,
+                Ibrahim, S. A., &amp; Karam, J. (2025). Financial crisis and its
+                association with parental stress and children's mental health in
+                Lebanon. BMC Public Health, 25(1), 156.
+                <a
+                  href="https://doi.org/10.1186/s12889-025-21398-z"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1186/s12889-025-21398-z</a
+                >
               </li>
               <li>
-                O’Donnell, J., &amp; Kingsley, M. (2020). The relationship
-                between housing and children’s socio-emotional and behavioral
-                development in Australia.
-                <em>Children and Youth Services Review, 117</em>, 105290.
-                https://doi.org/10.1016/J.CHILDYOUTH.2020.105290
+                Thorpe, K., Searle, B., Van Halen, O., Lakeman, N., Oakes, C.,
+                Harris, H., &amp; Staton, S. (2020). A market in mealtimes:
+                Social and economic factors associated with meal provision in
+                early care and education (ECE) services. SSRN Electronic
+                Journal.
+                <a
+                  href="https://doi.org/10.2139/SSRN.3718822"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.2139/SSRN.3718822</a
+                >
               </li>
               <li>
-                Sisson, J. H., Whitington, V., &amp; Shin, A. M. (2020).
-                “Teaching Culture Through Culture”: A Case Study of Culturally
-                Responsive Pedagogies in an Australian Early Childhood/Primary
-                Context.
-                <em>Journal of Research in Childhood Education, 34</em>(1),
-                108–126. https://doi.org/10.1080/02568543.2019.1692110
+                Vygotsky, L. S. (2019). Mind in society. Harvard University
+                Press.
+                <a
+                  href="https://doi.org/10.2307/j.ctvjf9vz4"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.2307/j.ctvjf9vz4</a
+                >
               </li>
               <li>
-                Zhang, L., &amp; Han, W. J. (2020). Uncovering Multidimensional
-                Poverty Experiences in Shaping Children’s Socioemotional
-                Trajectories during the First 6 Years of Schooling.
-                <em>Family Process, 59</em>(4), 1837–1855.
-                https://doi.org/10.1111/FAMP.12530
+                Xu, R., Yu, P., Liu, Y., Chen, G., Yang, Z., Zhang, Y., Wu, Y.,
+                Beggs, P. J., Zhang, Y., Boocock, J., Ji, F., Hanigan, I., Jay,
+                O., Bi, P., Vargas, N., Leder, K., Green, D., Quail, K., Huxley,
+                R., … Guo, Y. (2023). Climate change, environmental extremes,
+                and human health in Australia: Challenges, adaptation
+                strategies, and policy gaps. The Lancet Regional Health —
+                Western Pacific, 40, 100936.
+                <a
+                  href="https://doi.org/10.1016/j.lanwpc.2023.100936"
+                  target="_blank"
+                  rel="noopener"
+                  >https://doi.org/10.1016/j.lanwpc.2023.100936</a
+                >
               </li>
             </ul>
           </div>
         </section>
 
-        <!-- AI DECLARATION -->
+        <!-- ==================== AI DECLARATION ==================== -->
         <section class="view" id="ai-declaration">
-          <span class="tag-chip" style="background: #ececec; color: #333"
-            ><span class="tag-dot" style="background: #999"></span
-            >Appendices</span
-          >
+          <p class="eyebrow">Appendix</p>
           <h1 class="page-title">AI Declaration</h1>
           <p class="lede">
-            Statement on the use of Generative Artificial Intelligence for this
-            assessment.
+            Transparency statement regarding the use of artificial intelligence
+            tools in the creation of this portfolio.
           </p>
 
           <div class="card">
-            <h2><span class="num">→</span>Use of AI Tools</h2>
+            <h2><span class="num">→</span>Statement</h2>
             <p>
-              This digital portfolio was created using generative artificial
-              intelligence (AI) tools to help brainstorm structure, to improve
-              grammar, and to summarize important course literature. The author
-              has critically reviewed, edited and contextualised all content
-              created by AI for academic integrity and compliance with EPRO506
-              unit requirements. No final content was submitted without human
-              over sight and editing.
-            </p>
-            <h2 style="margin-top: 1.5rem">
-              <span class="num">→</span>AI Tool Reference
-            </h2>
-            <p>
-              OpenAI. (2024). <em>ChatGPT (Version 4o)</em> [Large language
-              model]. https://chat.openai.com
+              Artificial intelligence tools were used during the preparation of
+              this assessment. All AI-generated content was critically reviewed,
+              edited, and verified against academic sources by the author. The
+              final submission represents the author's own academic judgement,
+              analysis, and voice. All references are genuine and accurately
+              cited in APA 7th edition format.
             </p>
           </div>
         </section>
@@ -3135,135 +3123,130 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const pathBtns = document.querySelectorAll(".path-btn");
-        const views = document.querySelectorAll("section.view");
-        const subnavs = document.querySelectorAll(".subnav");
-        const subnavLinks = document.querySelectorAll(".subnav a");
-        const subtabs = document.querySelectorAll(".subtab");
+      (function () {
         const sidebar = document.getElementById("sidebarNav");
+        const hamburger = document.getElementById("hamburgerBtn");
         const backdrop = document.getElementById("drawerBackdrop");
-        const hamburgerBtn = document.getElementById("hamburgerBtn");
+        const allViews = document.querySelectorAll("section.view");
+        const allPathBtns = document.querySelectorAll(".path-btn.top");
+        const allSubnavs = document.querySelectorAll(".subnav");
+        const allSubnavLinks = document.querySelectorAll(".subnav a");
+        const allSubtabs = document.querySelectorAll(".subtab");
 
-        // Function to switch main view
-        function switchView(targetId, anchorId = null) {
-          // Deactivate all views and path buttons
-          views.forEach((v) => v.classList.remove("active"));
-          pathBtns.forEach((b) => b.classList.remove("active"));
-
-          // Activate the target view
-          const targetView = document.getElementById(targetId);
-          if (targetView) {
-            targetView.classList.add("active");
-          }
-
-          // Activate the target path button (top level)
-          const targetBtn = document.querySelector(
-            `.path-btn[data-target="${targetId}"]`,
-          );
-          if (targetBtn) {
-            targetBtn.classList.add("active");
-
-            // Open corresponding subnav if it has one
-            const associatedSubnav = document.querySelector(
-              `.subnav[data-subnav-for="${targetId}"]`,
-            );
-            subnavs.forEach((sn) => sn.classList.remove("open"));
-            if (associatedSubnav) {
-              associatedSubnav.classList.add("open");
-            }
-          }
-
-          // Handle scrolling to anchor if provided (for subnav links)
-          if (anchorId && targetView) {
-            // Need a slight delay to ensure the view is visible before scrolling
-            setTimeout(() => {
-              const anchorEl = document.getElementById(anchorId);
-              if (anchorEl) {
-                const offset = 80; // Adjust offset for sticky subtabs if needed
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = anchorEl.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
-
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth",
-                });
-              }
-            }, 100);
-          } else if (targetView) {
-            // Scroll to top of main view if no anchor
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }
-
-          // Close mobile drawer if open
-          if (sidebar.classList.contains("open")) {
-            sidebar.classList.remove("open");
-            backdrop.classList.remove("open");
-          }
+        function closeDrawer() {
+          sidebar.classList.remove("open");
+          backdrop.classList.remove("open");
         }
 
-        // Event listeners for top-level path buttons
-        pathBtns.forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = btn.getAttribute("data-target");
-            switchView(target);
-          });
-        });
-
-        // Event listeners for subnav links
-        subnavLinks.forEach((link) => {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = link.getAttribute("data-target");
-            const anchor = link.getAttribute("data-anchor");
-            switchView(target, anchor);
-
-            // Update active state for subnav links
-            subnavLinks.forEach((l) => l.classList.remove("active"));
-            link.classList.add("active");
-          });
-        });
-
-        // Event listeners for in-page subtabs
-        subtabs.forEach((tab) => {
-          tab.addEventListener("click", (e) => {
-            e.preventDefault();
-            const anchor = tab.getAttribute("data-anchor");
-            const anchorEl = document.getElementById(anchor);
-            if (anchorEl) {
-              const offset = 80;
-              const bodyRect = document.body.getBoundingClientRect().top;
-              const elementRect = anchorEl.getBoundingClientRect().top;
-              const elementPosition = elementRect - bodyRect;
-              const offsetPosition = elementPosition - offset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-
-            // Update active state for subtabs
-            const parentSubtabs = tab.parentElement.querySelectorAll(".subtab");
-            parentSubtabs.forEach((t) => t.classList.remove("active"));
-            tab.classList.add("active");
-          });
-        });
-
-        // Mobile drawer toggle
-        hamburgerBtn.addEventListener("click", () => {
+        hamburger.addEventListener("click", function () {
           sidebar.classList.toggle("open");
           backdrop.classList.toggle("open");
         });
 
-        backdrop.addEventListener("click", () => {
-          sidebar.classList.remove("open");
-          backdrop.classList.remove("open");
+        backdrop.addEventListener("click", closeDrawer);
+
+        function switchView(targetId) {
+          allViews.forEach(function (v) {
+            v.classList.remove("active");
+          });
+          var el = document.getElementById(targetId);
+          if (el) {
+            el.classList.add("active");
+            el.scrollTop = 0;
+          }
+
+          allPathBtns.forEach(function (btn) {
+            btn.classList.remove("active");
+            if (btn.getAttribute("data-target") === targetId) {
+              btn.classList.add("active");
+            }
+          });
+
+          allSubnavs.forEach(function (sn) {
+            if (sn.getAttribute("data-subnav-for") === targetId) {
+              sn.classList.add("open");
+            } else {
+              sn.classList.remove("open");
+            }
+          });
+
+          allSubnavLinks.forEach(function (a) {
+            a.classList.remove("active");
+          });
+
+          closeDrawer();
+        }
+
+        allPathBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var target = this.getAttribute("data-target");
+            var currentActive = document.querySelector(".path-btn.top.active");
+            if (
+              currentActive &&
+              currentActive === this &&
+              target !== "intro" &&
+              target !== "refs" &&
+              target !== "ai-declaration"
+            ) {
+              var subnav = document.querySelector(
+                '.subnav[data-subnav-for="' + target + '"]',
+              );
+              if (subnav) {
+                subnav.classList.toggle("open");
+              }
+              return;
+            }
+            switchView(target);
+          });
         });
-      });
+
+        allSubnavLinks.forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            e.preventDefault();
+            var target = this.getAttribute("data-target");
+            var anchor = this.getAttribute("data-anchor");
+
+            switchView(target);
+
+            allSubnavLinks.forEach(function (l) {
+              l.classList.remove("active");
+            });
+            this.classList.add("active");
+
+            if (anchor) {
+              setTimeout(function () {
+                var anchorEl = document.getElementById(anchor);
+                if (anchorEl) {
+                  anchorEl.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }, 100);
+            }
+          });
+        });
+
+        allSubtabs.forEach(function (tab) {
+          tab.addEventListener("click", function (e) {
+            e.preventDefault();
+            var anchor = this.getAttribute("data-anchor");
+            if (anchor) {
+              var anchorEl = document.getElementById(anchor);
+              if (anchorEl) {
+                anchorEl.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
+
+            allSubnavLinks.forEach(function (l) {
+              l.classList.remove("active");
+              if (l.getAttribute("data-anchor") === anchor) {
+                l.classList.add("active");
+              }
+            });
+          });
+        });
+      })();
     </script>
   </body>
 </html>
