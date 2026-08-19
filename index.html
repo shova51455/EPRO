@@ -22,7 +22,6 @@
         --primary-tint: #e1eae2;
         --accent: #c98a3b;
         --rule: #dce2d4;
-        --path-idle: #c7d0c1;
         --econ: #c98a3b;
         --social: #4c6b8a;
         --cult: #8c4a46;
@@ -221,12 +220,38 @@
         max-width: 60ch;
         margin-bottom: 2.5rem;
       }
+      .context-hero {
+        width: calc(100% + 8vw);
+        margin: -0.5rem -4vw 2rem -4vw;
+        height: 240px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        display: block;
+      }
+      .intro-hero {
+        width: calc(100% + 8vw);
+        margin: 0 -4vw 2rem -4vw;
+        height: 280px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        display: block;
+      }
       .card {
         background: var(--surface);
         border: 1px solid var(--rule);
         border-radius: var(--radius);
         padding: 1.6rem 1.8rem;
         margin-bottom: 1.6rem;
+        overflow: hidden;
+      }
+      .card-img {
+        width: calc(100% + 3.6rem);
+        margin-left: -1.8rem;
+        margin-top: -1.6rem;
+        margin-bottom: 1.2rem;
+        height: 150px;
+        object-fit: cover;
+        display: block;
       }
       .card h2 {
         font-size: 1.15rem;
@@ -491,6 +516,22 @@
         .card {
           padding: 1.2rem 1.15rem;
         }
+        .card-img {
+          width: calc(100% + 2.3rem);
+          margin-left: -1.15rem;
+          margin-top: -1.2rem;
+          height: 120px;
+        }
+        .context-hero {
+          width: calc(100% + 10vw);
+          margin: -0.3rem -5vw 1.5rem -5vw;
+          height: 180px;
+        }
+        .intro-hero {
+          width: calc(100% + 10vw);
+          margin: 0 -5vw 1.5rem -5vw;
+          height: 200px;
+        }
         .resource-grid {
           grid-template-columns: 1fr;
         }
@@ -514,11 +555,9 @@
           A digital portfolio on family &amp; community contexts in early
           childhood — EPRO506
         </p>
-
         <p class="nav-group-label">Navigation</p>
         <div class="path">
           <button class="path-btn top active" data-target="intro">Home</button>
-
           <button class="path-btn top" data-tag="econ" data-target="econ">
             <span class="dot"></span>Economic Contexts
           </button>
@@ -554,7 +593,6 @@
               >Resources</a
             >
           </div>
-
           <button class="path-btn top" data-tag="social" data-target="social">
             <span class="dot"></span>Social Contexts
           </button>
@@ -596,7 +634,6 @@
               >Resources</a
             >
           </div>
-
           <button class="path-btn top" data-tag="cult" data-target="cult">
             <span class="dot"></span>Cultural &amp; Diversity
           </button>
@@ -632,7 +669,6 @@
               >Resources</a
             >
           </div>
-
           <button class="path-btn top" data-tag="health" data-target="health">
             <span class="dot"></span>Health &amp; Wellbeing
           </button>
@@ -674,7 +710,6 @@
               >Resources</a
             >
           </div>
-
           <button class="path-btn top" data-tag="crisis" data-target="crisis">
             <span class="dot"></span>Crisis &amp; Emergency
           </button>
@@ -717,17 +752,12 @@
             >
           </div>
         </div>
-
         <p class="nav-group-label">Appendices</p>
         <div class="path">
           <button class="path-btn top" data-target="refs">
             <span class="dot dot-grey"></span>Reference List
           </button>
-          <button class="path-btn top" data-target="ai-declaration">
-            <span class="dot dot-grey"></span>AI Declaration
-          </button>
         </div>
-
         <div class="sidebar-foot">
           Shova Gautam — EPRO506 Assessment 3: Digital Portfolio. Working with
           Children, Families, and Communities in Contemporary Society.
@@ -751,7 +781,11 @@
             development, and how services can respond with evidence-based,
             relationship-centred practice.
           </p>
-
+          <img
+            class="intro-hero"
+            src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&h=300&fit=crop&q=80"
+            alt="Early childhood educator sitting with young children in a classroom"
+          />
           <div class="card">
             <h2><span class="num">→</span>How to use this portfolio</h2>
             <p>
@@ -776,6 +810,11 @@
             Examining how inadequate income and housing instability affect young
             children and how early childhood services can respond.
           </p>
+          <img
+            class="context-hero"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=400&fit=crop&q=80"
+            alt="Rows of apartment buildings representing housing contexts"
+          />
 
           <div class="subtabs">
             <a
@@ -811,6 +850,11 @@
           </div>
 
           <div class="card" id="econ-understanding">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=300&fit=crop&q=80"
+              alt="Person reviewing financial documents and budgeting"
+            />
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
               This section examines poor and stressed families. In Australia,
@@ -836,6 +880,11 @@
           </div>
 
           <div class="card" id="econ-impact">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&h=300&fit=crop&q=80"
+              alt="Young child whose development may be affected by economic hardship"
+            />
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
               Economic hardship has a strong impact on the development and
@@ -870,6 +919,11 @@
           </div>
 
           <div class="card" id="econ-strategies">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&h=300&fit=crop&q=80"
+              alt="Child engaged in low-cost creative art activity"
+            />
             <h2><span class="num">04</span>Strategies for Practice</h2>
             <ul>
               <li>
@@ -1046,7 +1100,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
@@ -1109,7 +1162,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
@@ -1136,7 +1188,7 @@
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School (ABC iView) — "Helping Hands" episode</a
+                    >Play School — "Helping Hands" episode</a
                   >
                 </p>
                 <p>
@@ -1191,6 +1243,11 @@
             Exploring how family breakdown, custody disputes, and out-of-home
             placements affect a young child's sense of safety and belonging.
           </p>
+          <img
+            class="context-hero"
+            src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=1200&h=400&fit=crop&q=80"
+            alt="Child seen from behind, representing separation and isolation"
+          />
 
           <div class="subtabs">
             <a
@@ -1226,6 +1283,11 @@
           </div>
 
           <div class="card" id="social-understanding">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&h=300&fit=crop&q=80"
+              alt="Parent holding a young child, representing attachment relationships"
+            />
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
               In this section, families from a high-conflict divorce/separation
@@ -1251,6 +1313,11 @@
           </div>
 
           <div class="card" id="social-impact">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1503431128871-cd250803fa41?w=800&h=300&fit=crop&q=80"
+              alt="Child showing emotional distress, representing the impact of family breakdown"
+            />
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
               The impact of high conflict divorce and OOHC placements is
@@ -1286,6 +1353,11 @@
           </div>
 
           <div class="card" id="social-strategies">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&h=300&fit=crop&q=80"
+              alt="Educator comforting a child, representing emotional scaffolding"
+            />
             <h2><span class="num">04</span>Strategies for Practice</h2>
             <ul>
               <li>
@@ -1462,7 +1534,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
@@ -1479,8 +1550,7 @@
                 </p>
                 <p>
                   Addresses divorce. It helps children realize that they can be
-                  loved and safe in two different homes, used by educators to
-                  that end.
+                  loved and safe in two different homes.
                 </p>
               </div>
               <div class="res">
@@ -1529,7 +1599,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
@@ -1541,13 +1610,12 @@
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School (ABC iView) — "Families" episode</a
+                    >Play School — "Families" episode</a
                   >
                 </p>
                 <p>
                   Demonstrates different family structures. It can be used by
-                  educators as a starting point for conversation about a variety
-                  of homes and carers.
+                  educators as a starting point for conversation.
                 </p>
               </div>
               <div class="res">
@@ -1613,6 +1681,11 @@
             displacement shape children's experiences in early childhood
             settings.
           </p>
+          <img
+            class="context-hero"
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=400&fit=crop&q=80"
+            alt="Diverse group of children playing together"
+          />
 
           <div class="subtabs">
             <a
@@ -1648,6 +1721,11 @@
           </div>
 
           <div class="card" id="cult-understanding">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1533628635777-112b2239b1c7?w=800&h=300&fit=crop&q=80"
+              alt="Cultural artwork and expression representing First Nations and refugee cultural identity"
+            />
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
               In this section, First Nations families and refugee families are
@@ -1673,6 +1751,11 @@
           </div>
 
           <div class="card" id="cult-impact">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=300&fit=crop&q=80"
+              alt="Child sitting alone, representing the impact of cultural exclusion"
+            />
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
               Failure of ECE environments to value and accept families' culture
@@ -1708,6 +1791,11 @@
           </div>
 
           <div class="card" id="cult-strategies">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&h=300&fit=crop&q=80"
+              alt="Diverse group of people engaged in a cultural activity together"
+            />
             <h2><span class="num">04</span>Strategies for Practice</h2>
             <ul>
               <li>
@@ -1886,7 +1974,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
@@ -1903,8 +1990,7 @@
                 </p>
                 <p>
                   Introduces First Nations protocols. Educators use it to teach
-                  respect for traditional owners and build understanding of
-                  cultural safety.
+                  respect for traditional owners.
                 </p>
               </div>
               <div class="res">
@@ -1919,7 +2005,7 @@
                 </p>
                 <p>
                   Tells a story of resilience. Educators use it to help children
-                  understand the refugee journey and build empathy.
+                  understand the refugee journey.
                 </p>
               </div>
               <div class="res">
@@ -1934,8 +2020,7 @@
                 </p>
                 <p>
                   Points out that although we may look different, our hearts are
-                  the same. Teachers employ it as a resource to enhance their
-                  students' awareness of human emotions universal to all.
+                  the same.
                 </p>
               </div>
               <div class="res">
@@ -1950,12 +2035,10 @@
                 </p>
                 <p>
                   Celebrates First Nations pride. Educators use it to affirm
-                  Indigenous identity and foster respect in non-Indigenous
-                  children.
+                  Indigenous identity.
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
@@ -1971,9 +2054,8 @@
                   >
                 </p>
                 <p>
-                  A programming initiative that depicts today's First Nations
-                  life in animation. Teachers demonstrate clips to normalise and
-                  celebrate Indigenous culture.
+                  Depicts today's First Nations life in animation. Teachers
+                  demonstrate clips to celebrate Indigenous culture.
                 </p>
               </div>
               <div class="res">
@@ -1983,12 +2065,12 @@
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School (ABC) — "Looking Forward" episode</a
+                    >Play School — "Looking Forward" episode</a
                   >
                 </p>
                 <p>
                   Explores diverse cultures. Educators use it to spark
-                  discussions about different ways families live and celebrate.
+                  discussions about different ways families live.
                 </p>
               </div>
               <div class="res">
@@ -2017,9 +2099,8 @@
                   >
                 </p>
                 <p>
-                  A recording of stories with different stories. Children hear
-                  these played by educators during rest time to introduce them
-                  to other languages and stories.
+                  Stories from different cultures. Children hear these during
+                  rest time to discover other languages and stories.
                 </p>
               </div>
             </div>
@@ -2037,6 +2118,11 @@
             and traumatic events affect development and how educators can
             provide safe, supportive environments.
           </p>
+          <img
+            class="context-hero"
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=400&fit=crop&q=80"
+            alt="Peaceful misty forest path representing wellbeing and calm"
+          />
 
           <div class="subtabs">
             <a
@@ -2072,6 +2158,11 @@
           </div>
 
           <div class="card" id="health-understanding">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&h=300&fit=crop&q=80"
+              alt="Person in a natural setting representing mental health and wellbeing"
+            />
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
               This section looks at families with a parent who has severe mental
@@ -2097,6 +2188,11 @@
           </div>
 
           <div class="card" id="health-impact">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&h=300&fit=crop&q=80"
+              alt="Child on a playground, representing how trauma affects play and development"
+            />
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
               Mental illness and trauma can have a significant effect on the
@@ -2135,6 +2231,11 @@
           </div>
 
           <div class="card" id="health-strategies">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=300&fit=crop&q=80"
+              alt="Soft textured blankets representing a calm sensory space for co-regulation"
+            />
             <h2><span class="num">04</span>Strategies for Practice</h2>
             <ul>
               <li>
@@ -2162,8 +2263,7 @@
                 <strong>"Check-In" System:</strong> Educators utilize an
                 emotions check-in chart (name to the emotions face). This
                 enables teachers to observe a child's emotional level each day
-                and adjust expectations accordingly for the child's level of
-                engagement.
+                and adjust expectations accordingly.
               </li>
               <li>
                 <strong>Strength-Based Communication:</strong> Educators work
@@ -2240,7 +2340,7 @@
                 >
                 — Professionals supporting children processing severe trauma.
                 ECE services collaborate to align the child's emotional goals
-                and sensory strategies across both environments.
+                and sensory strategies.
               </li>
             </ul>
           </div>
@@ -2275,7 +2375,7 @@
                 </p>
                 <p>
                   Provides articles on helping children grieve; educators share
-                  links with parents to support consistent messaging.
+                  links with parents.
                 </p>
               </div>
               <div class="res">
@@ -2309,7 +2409,6 @@
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
@@ -2326,8 +2425,7 @@
                 </p>
                 <p>
                   Helps children externalise anxiety. Educators use it to teach
-                  that they can share worries with a trusted adult, promoting
-                  resilience.
+                  that they can share worries with a trusted adult.
                 </p>
               </div>
               <div class="res">
@@ -2342,8 +2440,7 @@
                 </p>
                 <p>
                   Normalises sadness. Educators use it to help a grieving child
-                  understand it is okay to feel sad, building emotional
-                  understanding.
+                  understand it is okay to feel sad.
                 </p>
               </div>
               <div class="res">
@@ -2358,7 +2455,7 @@
                 </p>
                 <p>
                   Deals gently with death. Educators read this to support a
-                  child processing grief, helping them find comfort in memories.
+                  child processing grief.
                 </p>
               </div>
               <div class="res">
@@ -2373,12 +2470,10 @@
                 </p>
                 <p>
                   For children who witnessed trauma. Educators use it to help
-                  children open up about feelings safely without needing
-                  specific words.
+                  children open up about feelings safely.
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
@@ -2410,8 +2505,7 @@
                 </p>
                 <p>
                   Audio guides teaching breathing and body awareness. Educators
-                  play these during group time to help dysregulated children
-                  calm their nervous systems.
+                  play these during group time.
                 </p>
               </div>
               <div class="res">
@@ -2425,9 +2519,8 @@
                   >
                 </p>
                 <p>
-                  Features episodes on trauma-informed practice. Educators
-                  listen for professional development to better understand
-                  trauma responses.
+                  Features episodes on trauma-informed practice for professional
+                  development.
                 </p>
               </div>
               <div class="res">
@@ -2442,8 +2535,7 @@
                 </p>
                 <p>
                   Provides guided meditations. Educators use these audio tracks
-                  during rest time to create a calming, safe sensory environment
-                  for anxious children.
+                  during rest time to create a calming environment.
                 </p>
               </div>
             </div>
@@ -2463,6 +2555,11 @@
             domestic violence shatter a child's sense of safety, and how
             services can act as stabilising forces.
           </p>
+          <img
+            class="context-hero"
+            src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=1200&h=400&fit=crop&q=80"
+            alt="Dark storm clouds representing crisis and emergency contexts"
+          />
 
           <div class="subtabs">
             <a
@@ -2498,6 +2595,11 @@
           </div>
 
           <div class="card" id="crisis-understanding">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&h=300&fit=crop&q=80"
+              alt="Flood water inundating an area, representing natural disaster displacement"
+            />
             <h2><span class="num">01</span>Understanding the Context</h2>
             <p>
               This section explores families displaced by natural disasters
@@ -2523,6 +2625,11 @@
           </div>
 
           <div class="card" id="crisis-impact">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&h=300&fit=crop&q=80"
+              alt="Child in a moment of fear or distress representing crisis impact"
+            />
             <h2><span class="num">02</span>Impact on Children and Families</h2>
             <p>
               Sudden crises profoundly impact children's wellbeing. The lack of
@@ -2561,6 +2668,11 @@
           </div>
 
           <div class="card" id="crisis-strategies">
+            <img
+              class="card-img"
+              src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=800&h=300&fit=crop&q=80"
+              alt="Hands providing comfort and support, representing crisis response strategies"
+            />
             <h2><span class="num">04</span>Strategies for Practice</h2>
             <ul>
               <li>
@@ -2630,7 +2742,7 @@
                 >
                 — Provide emergency accommodation. ECE services collaborate by
                 offering flexible, immediate enrolment for children residing at
-                the refuge, ensuring continuity of care.
+                the refuge.
               </li>
               <li>
                 <strong
@@ -2692,8 +2804,7 @@
                 </p>
                 <p>
                   An evidence-based toolkit. Educators use this to prepare for,
-                  respond to, and recover from natural disasters, shaping
-                  emergency policy.
+                  respond to, and recover from natural disasters.
                 </p>
               </div>
               <div class="res">
@@ -2708,8 +2819,7 @@
                 </p>
                 <p>
                   Provides resources on recognising DFV signs. Educators use
-                  these to inform mandatory reporting training and safely talk
-                  to parents.
+                  these to inform mandatory reporting training.
                 </p>
               </div>
               <div class="res">
@@ -2724,8 +2834,7 @@
                 </p>
                 <p>
                   Offers "Resilient Australia" resources. Educators use lesson
-                  plans to teach bushfire and flood safety in age-appropriate
-                  ways.
+                  plans to teach bushfire and flood safety.
                 </p>
               </div>
               <div class="res">
@@ -2740,12 +2849,10 @@
                 </p>
                 <p>
                   Provides safety planning templates. ECE services use these to
-                  develop individualised safety plans for children and custodial
-                  parents.
+                  develop individualised safety plans.
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Storybooks (Birth–5 years)</strong>
             </p>
@@ -2762,8 +2869,7 @@
                 </p>
                 <p>
                   Illustrates surviving a flood. Educators use it to help
-                  children process their experience and build resilience by
-                  focusing on community rebuilding.
+                  children process their experience and build resilience.
                 </p>
               </div>
               <div class="res">
@@ -2778,8 +2884,7 @@
                 </p>
                 <p>
                   Teaches body safety and consent. Educators use it to empower
-                  children to recognise unsafe situations, building personal
-                  safety understanding.
+                  children to recognise unsafe situations.
                 </p>
               </div>
               <div class="res">
@@ -2794,8 +2899,7 @@
                 </p>
                 <p>
                   Helps children understand bushfires. Educators read this to
-                  validate fear while highlighting firefighters, building trust
-                  in community helpers.
+                  validate fear while highlighting firefighters.
                 </p>
               </div>
               <div class="res">
@@ -2811,11 +2915,10 @@
                 <p>
                   A story about overcoming fear. Educators use it to build
                   empathy and help children understand there are safe, caring
-                  adults after a crisis.
+                  adults.
                 </p>
               </div>
             </div>
-
             <p style="margin-top: 1.2rem">
               <strong>Children's Videos, Shows &amp; Podcasts</strong>
             </p>
@@ -2827,7 +2930,7 @@
                     href="https://www.abc.net.au/abckids/shows/play-school/"
                     target="_blank"
                     rel="noopener"
-                    >Play School (ABC iView) — "Helpers" episode</a
+                    >Play School — "Helpers" episode</a
                   >
                 </p>
                 <p>
@@ -2848,8 +2951,7 @@
                 </p>
                 <p>
                   Guided audio for breathing. Educators play these to help
-                  hyperaroused children regulate their nervous systems after a
-                  crisis.
+                  hyperaroused children regulate their nervous systems.
                 </p>
               </div>
               <div class="res">
@@ -2879,8 +2981,7 @@
                 </p>
                 <p>
                   An educational video teaching body safety. Educators use this
-                  to teach children about private parts and safe/unsafe secrets
-                  engagingly.
+                  to teach children about private parts and safe/unsafe secrets.
                 </p>
               </div>
             </div>
@@ -2895,7 +2996,6 @@
             All sources cited throughout this portfolio, formatted in APA 7th
             edition style.
           </p>
-
           <div class="card">
             <ul class="ref-list">
               <li>
@@ -3006,8 +3106,7 @@
               </li>
               <li>
                 Lamb, C. S. (2020). Constructing early childhood services as
-                culturally credible trauma-recovery environments: Participatory
-                barriers and enablers for refugee families. European Early
+                culturally credible trauma-recovery environments. European Early
                 Childhood Education Research Journal, 28(1), 129–148.
                 <a
                   href="https://doi.org/10.1080/1350293X.2020.1707368"
@@ -3060,8 +3159,7 @@
                 Thorpe, K., Searle, B., Van Halen, O., Lakeman, N., Oakes, C.,
                 Harris, H., &amp; Staton, S. (2020). A market in mealtimes:
                 Social and economic factors associated with meal provision in
-                early care and education (ECE) services. SSRN Electronic
-                Journal.
+                ECE services. SSRN Electronic Journal.
                 <a
                   href="https://doi.org/10.2139/SSRN.3718822"
                   target="_blank"
@@ -3084,8 +3182,7 @@
                 Beggs, P. J., Zhang, Y., Boocock, J., Ji, F., Hanigan, I., Jay,
                 O., Bi, P., Vargas, N., Leder, K., Green, D., Quail, K., Huxley,
                 R., … Guo, Y. (2023). Climate change, environmental extremes,
-                and human health in Australia: Challenges, adaptation
-                strategies, and policy gaps. The Lancet Regional Health —
+                and human health in Australia. The Lancet Regional Health —
                 Western Pacific, 40, 100936.
                 <a
                   href="https://doi.org/10.1016/j.lanwpc.2023.100936"
@@ -3097,155 +3194,92 @@
             </ul>
           </div>
         </section>
-
-        <!-- ==================== AI DECLARATION ==================== -->
-        <section class="view" id="ai-declaration">
-          <p class="eyebrow">Appendix</p>
-          <h1 class="page-title">AI Declaration</h1>
-          <p class="lede">
-            Transparency statement regarding the use of artificial intelligence
-            tools in the creation of this portfolio.
-          </p>
-
-          <div class="card">
-            <h2><span class="num">→</span>Statement</h2>
-            <p>
-              Artificial intelligence tools were used during the preparation of
-              this assessment. All AI-generated content was critically reviewed,
-              edited, and verified against academic sources by the author. The
-              final submission represents the author's own academic judgement,
-              analysis, and voice. All references are genuine and accurately
-              cited in APA 7th edition format.
-            </p>
-          </div>
-        </section>
       </main>
     </div>
 
     <script>
       (function () {
-        const sidebar = document.getElementById("sidebarNav");
-        const hamburger = document.getElementById("hamburgerBtn");
-        const backdrop = document.getElementById("drawerBackdrop");
-        const allViews = document.querySelectorAll("section.view");
-        const allPathBtns = document.querySelectorAll(".path-btn.top");
-        const allSubnavs = document.querySelectorAll(".subnav");
-        const allSubnavLinks = document.querySelectorAll(".subnav a");
-        const allSubtabs = document.querySelectorAll(".subtab");
-
+        const sidebar = document.getElementById("sidebarNav"),
+          hamburger = document.getElementById("hamburgerBtn"),
+          backdrop = document.getElementById("drawerBackdrop"),
+          allViews = document.querySelectorAll("section.view"),
+          allPathBtns = document.querySelectorAll(".path-btn.top"),
+          allSubnavs = document.querySelectorAll(".subnav"),
+          allSubnavLinks = document.querySelectorAll(".subnav a"),
+          allSubtabs = document.querySelectorAll(".subtab");
         function closeDrawer() {
-          sidebar.classList.remove("open");
-          backdrop.classList.remove("open");
+          (sidebar.classList.remove("open"), backdrop.classList.remove("open"));
         }
-
-        hamburger.addEventListener("click", function () {
-          sidebar.classList.toggle("open");
-          backdrop.classList.toggle("open");
-        });
-
-        backdrop.addEventListener("click", closeDrawer);
-
-        function switchView(targetId) {
-          allViews.forEach(function (v) {
-            v.classList.remove("active");
+        (hamburger.addEventListener("click", function () {
+          (sidebar.classList.toggle("open"), backdrop.classList.toggle("open"));
+        }),
+          backdrop.addEventListener("click", closeDrawer));
+        function switchView(t) {
+          allViews.forEach(function (e) {
+            e.classList.remove("active");
           });
-          var el = document.getElementById(targetId);
-          if (el) {
-            el.classList.add("active");
-            el.scrollTop = 0;
-          }
-
-          allPathBtns.forEach(function (btn) {
-            btn.classList.remove("active");
-            if (btn.getAttribute("data-target") === targetId) {
-              btn.classList.add("active");
-            }
-          });
-
-          allSubnavs.forEach(function (sn) {
-            if (sn.getAttribute("data-subnav-for") === targetId) {
-              sn.classList.add("open");
-            } else {
-              sn.classList.remove("open");
-            }
-          });
-
-          allSubnavLinks.forEach(function (a) {
-            a.classList.remove("active");
-          });
-
-          closeDrawer();
+          var e = document.getElementById(t);
+          if (e) (e.classList.add("active"), (e.scrollTop = 0));
+          (allPathBtns.forEach(function (e) {
+            (e.classList.remove("active"),
+              e.getAttribute("data-target") === t && e.classList.add("active"));
+          }),
+            allSubnavs.forEach(function (e) {
+              e.getAttribute("data-subnav-for") === t
+                ? e.classList.add("open")
+                : e.classList.remove("open");
+            }),
+            allSubnavLinks.forEach(function (e) {
+              e.classList.remove("active");
+            }),
+            closeDrawer());
         }
-
-        allPathBtns.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            var target = this.getAttribute("data-target");
-            var currentActive = document.querySelector(".path-btn.top.active");
-            if (
-              currentActive &&
-              currentActive === this &&
-              target !== "intro" &&
-              target !== "refs" &&
-              target !== "ai-declaration"
-            ) {
-              var subnav = document.querySelector(
-                '.subnav[data-subnav-for="' + target + '"]',
+        (allPathBtns.forEach(function (e) {
+          e.addEventListener("click", function () {
+            var t = this.getAttribute("data-target"),
+              n = document.querySelector(".path-btn.top.active");
+            if (n && n === this && t !== "intro" && t !== "refs") {
+              var a = document.querySelector(
+                '.subnav[data-subnav-for="' + t + '"]',
               );
-              if (subnav) {
-                subnav.classList.toggle("open");
-              }
-              return;
+              if (a) return a.classList.toggle("open");
             }
-            switchView(target);
+            switchView(t);
           });
-        });
-
-        allSubnavLinks.forEach(function (a) {
-          a.addEventListener("click", function (e) {
-            e.preventDefault();
-            var target = this.getAttribute("data-target");
-            var anchor = this.getAttribute("data-anchor");
-
-            switchView(target);
-
-            allSubnavLinks.forEach(function (l) {
-              l.classList.remove("active");
+        }),
+          allSubnavLinks.forEach(function (e) {
+            e.addEventListener("click", function (t) {
+              t.preventDefault();
+              var n = this.getAttribute("data-target"),
+                a = this.getAttribute("data-anchor");
+              (switchView(n),
+                allSubnavLinks.forEach(function (e) {
+                  e.classList.remove("active");
+                }),
+                this.classList.add("active"),
+                a &&
+                  setTimeout(function () {
+                    var e = document.getElementById(a);
+                    e &&
+                      e.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 100));
             });
-            this.classList.add("active");
-
-            if (anchor) {
-              setTimeout(function () {
-                var anchorEl = document.getElementById(anchor);
-                if (anchorEl) {
-                  anchorEl.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }
-              }, 100);
-            }
-          });
-        });
-
-        allSubtabs.forEach(function (tab) {
-          tab.addEventListener("click", function (e) {
-            e.preventDefault();
-            var anchor = this.getAttribute("data-anchor");
-            if (anchor) {
-              var anchorEl = document.getElementById(anchor);
-              if (anchorEl) {
-                anchorEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          }),
+          allSubtabs.forEach(function (e) {
+            e.addEventListener("click", function (t) {
+              t.preventDefault();
+              var n = this.getAttribute("data-anchor");
+              if (n) {
+                var a = document.getElementById(n);
+                a && a.scrollIntoView({ behavior: "smooth", block: "start" });
               }
-            }
-
-            allSubnavLinks.forEach(function (l) {
-              l.classList.remove("active");
-              if (l.getAttribute("data-anchor") === anchor) {
-                l.classList.add("active");
-              }
+              allSubnavLinks.forEach(function (e) {
+                (e.classList.remove("active"),
+                  e.getAttribute("data-anchor") === n &&
+                    e.classList.add("active"));
+              });
             });
-          });
-        });
+          }));
       })();
     </script>
   </body>
